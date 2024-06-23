@@ -21,7 +21,7 @@
 .navbar__container {
     display: flex;
     justify-content: space-between;
-    height: 80px;
+    height: 100px;
     z-index: 1;
     width: 100%;
     max-width: 1300px;
@@ -30,18 +30,13 @@
 }
 
 #navbar__logo {
-    background-color: #ffc2d1;
-    background-image: linear-gradient(to top, #ffc2d1 0%, #ff8fab 100%);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
+    font-family: "Nanum Brush Script", cursive;
+    color: #fff;
     display: flex;
     align-items: center;
     cursor: pointer;
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 4rem;
 }
 
 .navbar__menu {
@@ -176,8 +171,8 @@
 }
 
 .main__container {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     justify-content: center;
     align-items: center;
     max-width: 1200px;
@@ -188,12 +183,13 @@
 }
 
 .main__heading {
-    font-size: 100px;
+    font-size: 20px;
     margin-bottom: 24px;
     color: #fff;
 }
 
-.main__heading span {
+.main__description {
+    font-size: 20px;
     background: #ffc2d1;  
     background: -webkit-linear-gradient(to right, #ffc2d1, #ff8fab);  
     background: linear-gradient(to right, #ffc2d1, #ff8fab); 
@@ -204,16 +200,37 @@
     -moz-text-fill-color: transparent;
 }
 
-.main__description {
-    font-size: 60px;
-    background: #ffc2d1;  
-    background: -webkit-linear-gradient(to right, #ffc2d1, #ff8fab);  
-    background: linear-gradient(to right, #ffc2d1, #ff8fab); 
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
+.main__img__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.main__image {
+    margin: 10px;
+    height: auto;
+    width: 300px;
+}
+
+.main__link__container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 90%;
+    text-align: center;
+    padding: 30px;
+}
+
+#linkdin__link {
+    height: auto;
+    width: 50px;
+}
+
+#github__link {
+    height: auto;
+    width: 50px;
 }
 
 .highlight {
@@ -221,13 +238,27 @@
 }
 
 @media screen and (max-width: 768px) {
+    .main__container {
+        display: grid;
+        grid-template-rows: 1fr;
+        justify-content: center;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        height: 90%;
+        text-align: center;
+        padding: 30px;
+        background-color: #ff8fab;
+    }    
+
     .main__heading {
-        font-size: 60px;
+        font-size: 20px;
     }
 
     .main__description {
-        font-size: 40px;
+        font-size: 20px;
     }
+
 }
 
 
@@ -236,23 +267,30 @@
 .projects {
     background: #000000;
     background: linear-gradient(to right, #161616, #000000);
-    padding: 10rem 0;
+    padding-bottom: 10rem;
 }
 
 .projects__container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    justify-content: center;
+    grid-template-rows: 1fr;
+    /* align-items: center;
+    justify-content: center; */
     margin: 0 auto;
     height: 90%;
-    z-index: 1;
     width: 100%;
     max-width: 1300px;
     padding: 0 50px;
+    background-color: #ff8fab;
 }
 
-
+.specialisation__header__text {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+}
 
 
 
@@ -293,7 +331,7 @@
     align-items: center;
     cursor: pointer;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 0.7rem;
 }
 
 
@@ -309,7 +347,7 @@
     align-items: center;
     width: 90%;
     max-width: 2000px;
-    margin: 40px auto 0 auto;
+    margin: 4px auto 0 auto;
 }
 
 .media__icons {
@@ -319,26 +357,28 @@
     width: 240px;
 }
 
-.website__rights {
+.footer__mail {
     color: #fff;
+    font-size: 0.7rem;
+}
+
+.website__rights {
+    color: darkgrey;
+    font-size: 0.7rem;
 }
 
 
 @media screen and (max-width: 820px) {
-    .footer__links {
-        padding: 2rem;
-    }
-
+    
     #footer__logo {
-        margin-bottom: 2rem;
+        margin-bottom: 0rem;
+
     }
 
     .website__rights {
-        margin-bottom: 2rem;
-    }
-
-    .footer__links--wrapper {
-        flex-direction: column;
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+        font-size: 0.7rem;
     }
 
     .media--wrap {
