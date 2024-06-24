@@ -192,6 +192,23 @@
     /* background-color: purple; */
 }
 
+.read__more {
+    font-size: 17px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+    color: #ffc2d1;
+    margin-left: 10px;
+    margin-bottom: 40px;
+    width: 31%;
+    height: 0%;
+}
+
+.read__more:hover {
+    color: #be8f9b;
+}
+
 
 
 /* ----------------------------------------------- */
@@ -238,6 +255,12 @@
     padding-left: 40px;
     border-radius: 1%;
     background-color: #222222;
+}
+
+.movementSystem__text__container {
+    /* background-color: #2b5541; */
+    display: grid;
+    grid-template-rows: 1fr 1fr .1fr;
 }
 
 .movementSystem__header__text {
@@ -293,6 +316,12 @@
     background-color: #222222;
 }
 
+.inventorySystem__text__container {
+    /* background-color: #2b5541; */
+    display: grid;
+    grid-template-rows: 1fr 1fr .1fr;
+}
+
 .inventorySystem__header__text {
     font-family: "Nanum Brush Script", cursive;
     font-size: 50px;
@@ -346,6 +375,12 @@
     background-color: #222222;
 }
 
+.GP3__text__container {
+    /* background-color: #2b5541; */
+    display: grid;
+    grid-template-rows: 1fr 1fr .1fr;
+}
+
 .GP3__header__text {
     font-family: "Nanum Brush Script", cursive;
     font-size: 50px;
@@ -397,6 +432,12 @@
     padding-left: 40px;
     border-radius: 1%;
     background-color: #222222;
+}
+
+.GP1__text__container {
+    /* background-color: #2b5541; */
+    display: grid;
+    grid-template-rows: 1fr 1fr .1fr;
 }
 
 .GP1__header__text {
