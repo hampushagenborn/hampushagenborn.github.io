@@ -1,0 +1,6 @@
+större footer med contact info
+
+tydlig call to action - utforma det efter detta
+seperera about och contact page
+
+experimentera med gradients
