@@ -179,7 +179,7 @@
 .main {
     background: #000000;
     background: linear-gradient(to right, #161616, #000000);
-    padding-top: 100px;
+    padding-top: 25px;
 }
 
 .main__container {

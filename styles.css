@@ -350,6 +350,144 @@
 
 
 /* ----------------------------------------------- */
+/* SKILLS TAB */
+/* ----------------------------------------------- */
+
+.experience {
+    background: #000000;
+    background: linear-gradient(to right, #161616, #000000);
+    padding-top: 20rem;
+    padding-bottom: 10rem;
+}
+
+.experience__container {
+    display: grid;
+    grid-template-rows: 1fr;
+    max-width: 1500px;
+    margin: 0 auto;
+    height: 90%;
+    text-align: left;
+    /* padding-left: 10px; */
+    /* background-color: #233223; */
+}
+
+.experience__header {
+    padding: 0px 100px;
+}
+
+.experience__header__text {
+    background-color: #3b3b3b;
+    font-family: "Nanum Brush Script", cursive;
+    font-size: 60px;
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    text-align: left;
+    border-radius: 10px;
+}
+
+.experience__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 20px;
+    max-width: 1500px;
+    margin: 0 6%;
+    height: 90%;
+    text-align: center;
+    /* background-color: #233223; */
+}
+
+.experience__text__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    max-width: 1500px;
+    margin: 0 6%;
+    text-align: center;
+    border-radius: 1%;
+    /* background-color: #222222; */
+}
+
+.experience__text {
+    font-family: "Nanum Brush Script", cursive;
+    font-size: 40px;
+    color: #fff;
+    width: 100%;
+    padding: 2rem 0px;
+}
+
+@media screen and (max-width: 960px) {
+    .experience {
+        background: #000000;
+        background: linear-gradient(to right, #161616, #000000);
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+    }
+    
+    .experience__container {
+        display: grid;
+        grid-template-rows: 1fr;
+        max-width: 1500px;
+        margin: 0 auto;
+        height: 100%;
+        text-align: left;
+        /* padding-left: 10px; */
+        /* background-color: #233223; */
+    }
+    
+    .experience__header {
+        padding: 0px 0px;
+    }
+    
+    .experience__header__text {
+        background-color: #3b3b3b;
+        font-family: "Nanum Brush Script", cursive;
+        font-size: 50px;
+        color: #fff;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 30px;
+        text-align: left;
+        border-radius: 10px;
+    }
+    
+    .experience__content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column-gap: 20px;
+        max-width: 1500px;
+        margin: 0 0%;
+        padding: 0px 10%;
+        height: 100%;
+        text-align: center;
+        /* background-color: #233223; */
+    }
+    
+    .experience__text__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        max-width: 1500px;
+        margin: 0 0%;
+        text-align: center;
+        border-radius: 1%;
+        /* background-color: #222222; */
+    }
+    
+    .experience__text {
+        font-family: "Nanum Brush Script", cursive;
+        font-size: 40px;
+        color: #fff;
+        width: 100%;
+        padding: 2rem 0px;
+    }
+
+}
+
+
+
+/* ----------------------------------------------- */
 /* TRANSITION TAB */
 /* ----------------------------------------------- */
 
@@ -568,9 +706,9 @@
 /* RECENT PROJECTS TAB */
 /* ----------------------------------------------- */
 
-.projects__recent {
+/* .projects__recent {
     
-}
+} */
 
 .recent__header__text {
     background-color: #3b3b3b;
