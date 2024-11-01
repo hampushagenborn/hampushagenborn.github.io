@@ -173,6 +173,296 @@
 
 
 /* ----------------------------------------------- */
+/* MAIN TAB */
+/* ----------------------------------------------- */
+
+.main {
+    background: #000000;
+    background: linear-gradient(to right, #161616, #000000);
+    padding-top: 100px;
+}
+
+.main__container {
+    display: grid;
+    grid-template-columns: 1fr .5fr;
+    grid-template-rows: 1fr 0.4fr;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 90%;
+    text-align: center;
+    padding: 30px;
+}
+
+.main__heading {
+    font-family: "Nanum Brush Script", cursive;
+    font-style: italic;
+    font-size: 60px;
+    margin-bottom: 24px;
+    color: #fff;
+    padding-right: 50px;
+    text-align: left;
+}
+
+.main__description {
+    font-size: 16px;
+    padding-top: 30px;
+    padding-right: 20px;
+    color: #fff;
+    text-align: left;
+}
+
+.main__description span {
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #ffc2d1;
+}
+
+.main__img__container {
+    display: grid;
+    grid-template-rows: 1fr 0.5fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__image {
+    margin: 10px;
+    height: auto;
+    width: 300px;
+    border-radius: 50%;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.main__link__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 60px;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 90%;
+    text-align: center;
+    padding: 30px;
+}
+
+.linkedin__link {
+    height: auto;
+    width: 50px;
+}
+
+.github__link {
+    height: auto;
+    width: 50px;
+}
+
+.highlight {
+    border-bottom: 4px solid rgb(255, 143, 171)
+}
+
+.main__button__container {
+    display: grid;
+    grid-template-rows: 1fr;
+    align-items: left;
+    padding: 0px 0px;
+}
+
+.resume__button__link {
+    font-size: 24px;
+    width: 250px;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 0px;
+    cursor: pointer;
+    outline: none;
+    background-color: #d04c73;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #742a40;
+    transition: 0.1s;
+}
+
+.resume__button__link:hover {
+    background-color: #b94366
+}
+
+.resume__button__link:active {
+    background-color: #b94366;
+    box-shadow: 0 5px #451926;
+    transform: translateY(4px);
+}
+
+@media screen and (max-width: 960px) {
+    
+    .main {
+        background: #000000;
+        background: linear-gradient(to right, #161616, #000000);
+        padding-top: 50px;
+    }
+
+    .main__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr .1fr;
+        justify-content: center;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        height: 90%;
+        text-align: center;
+        padding: 0px 30px;
+        /* background-color: #ff8fab; */
+    }    
+
+    .main__heading {
+        font-size: 56px;
+        margin-bottom: 12px;
+        padding-right: 25px;
+    }
+
+    .main__description {
+        font-size: 14px;
+        padding-top: 15px;
+        padding-right: 10px;
+    }
+
+    .main__description span {
+        font-size: 16px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .main__img__container {
+        display: grid;
+        grid-template-rows: .2fr .2fr;
+    }
+    
+    .main__image {
+        margin: 10px;
+        height: auto;
+        width: 200px;
+        border-radius: 50%;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+    }
+    
+    .main__link__container {
+        display: grid;
+        grid-template-rows: 1fr;
+        justify-content: center;
+        align-items: center;
+        max-width: 900px;
+        margin: 0 auto;
+        height: 90%;
+        text-align: center;
+        padding: 30px;
+    }
+    
+    .linkedin__link {
+        height: auto;
+        width: 40px;
+    }
+    
+    .github__link {
+        height: auto;
+        width: 40px;
+    }
+    
+    .highlight {
+        border-bottom: 4px solid rgb(255, 143, 171)
+    }
+
+    .main__button__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr;
+        align-content: center;
+        padding: 0px 50px;
+    }
+    
+    .resume__button__link {
+        font-size: 24px;
+        width: 100%;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 0px;
+        cursor: pointer;
+        outline: none;
+        background-color: #d04c73;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #742a40;
+        transition: 0.1s;
+    }
+    
+    .resume__button__link:hover {
+        background-color: #b94366
+    }
+    
+    .resume__button__link:active {
+        background-color: #b94366;
+        box-shadow: 0 5px #451926;
+        transform: translateY(4px);
+    }
+}
+
+
+
+/* ----------------------------------------------- */
+/* EMPTY TAB */
+/* ----------------------------------------------- */
+
+.empty_tab {
+    background: #000000;
+    background: linear-gradient(to right, #161616, #000000);
+    padding-top: 250px;
+    padding-bottom: 250px;
+}
+
+.empty_tab__container {
+    display: grid;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 960px) {
+    .empty_tab {
+        background: #000000;
+        background: linear-gradient(to right, #161616, #000000);
+        padding-top: 250px;
+        padding-bottom: 250px;
+    }
+    
+    .empty_tab__container {
+        display: grid;
+        grid-template-rows: 1fr;
+        justify-content: center;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        height: 100%;
+        text-align: center;
+    }
+}
+
+
+
+/* ----------------------------------------------- */
 /* FOOTER TAB */
 /* ----------------------------------------------- */
 
