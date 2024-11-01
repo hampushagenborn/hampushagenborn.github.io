@@ -42,7 +42,7 @@
     align-items: center;
     cursor: pointer;
     text-decoration: none;
-    font-size: 4rem;
+    font-size: 3.5rem;
 }
 
 .navbar__menu {
@@ -467,7 +467,7 @@
 .specialisation__content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 1px;
+    grid-column-gap: 20px;
     max-width: 1500px;
     margin: 0 6%;
     height: 90%;
@@ -552,10 +552,10 @@
     text-decoration: none;
     cursor: pointer;
     color: #ffc2d1;
-    margin-top: 80px;
-    margin-left: 10px;
+    /* margin-top: 10px;
+    margin-left: 10px; */
     width: 31%;
-    height: 0%;
+    height: 100%;
 }
 
 .read__more:hover {
@@ -586,7 +586,7 @@
 .recent__content {
     display: grid;
     grid-template-rows: 1fr 1fr;
-    grid-row-gap: 10px;
+    grid-row-gap: 20px;
     max-width: 1500px;
     margin: 0 auto;
     height: 90%;
@@ -620,12 +620,14 @@
 
 .movementSystem__container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr 1fr;
     max-width: 1500px;
     margin: 0 auto;
     text-align: left;
-    padding-left: 40px;
     border-radius: 1%;
+    padding-left: 40px;
+    padding-right: 40px;
     background-color: #222222;
 }
 
@@ -645,6 +647,7 @@
 
 .movementSystem__description__list {
     list-style-position: inside;
+    padding-bottom: 20px;
 }
 
 .movementSystem__description {
@@ -656,12 +659,16 @@
 }
 
 .movementSystem__img__container {
+    padding-top: 40px;
     overflow: hidden;
+    align-items: center;
 }
 
 .movementSystem__image {
-    height: auto;
-    width: 300px;
+    height: 100%;
+    width: 100%;
+    max-width: 500px;
+    object-fit: contain;
     transition: transform .8s;
     border-radius: 1.5%;
     -webkit-user-select: none;
@@ -683,12 +690,14 @@
 
 .inventorySystem__container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr 1fr;
     max-width: 1500px;
     margin: 0 auto;
     text-align: left;
-    padding-left: 40px;
     border-radius: 1%;
+    padding-left: 40px;
+    padding-right: 40px;
     background-color: #222222;
 }
 
@@ -708,6 +717,7 @@
 
 .inventorySystem__description__list {
     list-style-position: inside;
+    padding-bottom: 20px;
 }
 
 .inventorySystem__description {
@@ -719,12 +729,16 @@
 }
 
 .inventorySystem__img__container {
+    padding-top: 40px;
     overflow: hidden;
+    align-items: center;
 }
 
 .inventorySystem__image {
-    height: auto;
-    width: 300px;
+    height: 100%;
+    width: 100%;
+    max-width: 500px;
+    object-fit: contain;
     transition: transform .8s;
     border-radius: 1.5%;
     -webkit-user-select: none;
@@ -763,12 +777,14 @@
 
 .GP3__container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr 1fr;
     max-width: 1500px;
     margin: 0 auto;
     text-align: left;
-    padding-left: 40px;
     border-radius: 1%;
+    padding-left: 40px;
+    padding-right: 40px;
     background-color: #222222;
 }
 
@@ -780,7 +796,7 @@
 
 .GP3__header__text {
     font-family: "Nanum Brush Script", cursive;
-    font-size: 50px;
+    font-size: 35px;
     color: #fff;
     padding-top: 50px;
     padding-bottom: 20px;
@@ -788,6 +804,7 @@
 
 .GP3__description__list {
     list-style-position: inside;
+    padding-bottom: 20px;
 }
 
 .GP3__description {
@@ -799,12 +816,16 @@
 }
 
 .GP3__img__container {
+    padding-top: 40px;
     overflow: hidden;
+    align-items: center;
 }
 
 .GP3__image {
-    height: auto;
-    width: 300px;
+    height: 100%;
+    width: 100%;
+    max-width: 500px;
+    object-fit: contain;
     transition: transform .8s;
     border-radius: 1.5%;
     -webkit-user-select: none;
@@ -820,18 +841,21 @@
 
 
 
+
 /* ----------------------------------------------- */
 /* SECOND ITEM */
 /* ----------------------------------------------- */
 
 .GP1__container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr 1fr;
     max-width: 1500px;
     margin: 0 auto;
     text-align: left;
-    padding-left: 40px;
     border-radius: 1%;
+    padding-left: 40px;
+    padding-right: 40px;
     background-color: #222222;
 }
 
@@ -843,33 +867,36 @@
 
 .GP1__header__text {
     font-family: "Nanum Brush Script", cursive;
-    font-size: 50px;
+    font-size: 35px;
     color: #fff;
     padding-top: 50px;
     padding-bottom: 20px;
-    /* background-color: #be8f9b; */
 }
 
 .GP1__description__list {
     list-style-position: inside;
+    padding-bottom: 20px;
 }
 
 .GP1__description {
-    font-size: 16px;
+    font-size: 18px;
     padding-top: 20px;
     padding-right: 20px;
     color: #fff;
     text-align: left;
-    /* background-color: aqua; */
 }
 
 .GP1__img__container {
+    padding-top: 40px;
     overflow: hidden;
+    align-items: center;
 }
 
 .GP1__image {
-    height: auto;
-    width: 300px;
+    height: 100%;
+    width: 100%;
+    max-width: 500px;
+    object-fit: contain;
     transition: transform .8s;
     border-radius: 1.5%;
     -webkit-user-select: none;
@@ -888,18 +915,6 @@
 
 
 
-
-@media screen and (max-width: 1100px) {
-    .projects__container {
-        display: grid;
-        grid-template-columns: 1fr;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        margin: 0 auto;
-        height: 90%;
-    }
-}
 
 @media screen and (max-width: 960px) {
 
