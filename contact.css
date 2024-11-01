@@ -173,6 +173,269 @@
 
 
 /* ----------------------------------------------- */
+/* MAIN TAB */
+/* ----------------------------------------------- */
+
+.main {
+    background: #000000;
+    background: linear-gradient(to right, #161616, #000000);
+    padding-top: 25px;
+}
+
+.main__container {
+    display: grid;
+    grid-template-columns: 1fr .75fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    height: 100%;
+    text-align: left;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 350px;
+}
+
+/* .main__text__container {
+    text-align: left;
+} */
+
+.main__heading {
+    font-family: "Nanum Brush Script", cursive;
+    font-style: italic;
+    font-size: 60px;
+    margin-bottom: 24px;
+    margin-left: 10%;
+    margin-right: 20%;
+    color: #fff;
+    text-align: left;
+}
+
+.main__description {
+    font-size: 20px;
+    padding-top: 30px;
+    padding-right: 20px;
+    color: #fff;
+    text-align: left;
+    margin-left: 10%;
+    margin-right: 20%;
+}
+
+.main__link__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 40px;
+    max-width: 1500px;
+    height: 100%;
+    text-align: left;
+    padding-top: 100px;
+    /* background-color: #233223; */
+}
+
+.links__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 20%;
+    max-width: 1500px;
+    text-align: left;
+}
+
+.mail__container {
+    display: grid;
+    grid-template-columns: .15fr 1fr;
+    grid-column-gap: 20px;
+    width: 100%;
+    align-items: center;
+}
+
+.mail__icon {
+    height: auto;
+    width: 50px;
+}
+
+.mail__text {
+    color: #fff;
+    padding-top: 4px;
+}
+
+.mail__header {
+    font-weight: bold;
+}
+
+.mail {
+    text-decoration: none;
+    color: #fff;
+}
+
+.phone__number__container {
+    display: grid;
+    grid-template-columns: .15fr 1fr;
+    grid-column-gap: 20px;
+}
+
+.phone__icon {
+    height: auto;
+    width: 50px;
+}
+
+.phone__number__text {
+    color: #fff;
+    padding: 4px;
+}
+
+.phone__number__header {
+    font-weight: bold;
+}
+
+.phone__number {
+    text-decoration: none;
+    color: #fff;
+}
+
+.external__links__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+    max-width: 1500px;
+    margin: 0 25%;
+    height: 100%;
+    align-items: center;
+}
+
+.linkedin__link {
+    width: 54px;
+}
+
+.linkedin__icon {
+    height: auto;
+    width: 50px;
+}
+
+.instagram__link {
+    width: 54px;
+}
+
+.instagram__icon {
+    height: auto;
+    width: 50px;
+}
+
+@media screen and (max-width: 960px) { 
+    .main__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr .5fr;
+        grid-row-gap: 20px;
+        justify-content: center;
+        align-items: center;
+        max-width: 1500px;
+        margin: 0 auto;
+        height: 100%;
+        text-align: left;
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 60px;
+    }
+    
+    .main__heading {
+        font-family: "Nanum Brush Script", cursive;
+        font-style: italic;
+        font-size: 60px;
+        margin-right: 10%;
+        color: #fff;
+        text-align: left;
+    }
+    
+    .main__description {
+        font-size: 20px;
+        padding-top: 30px;
+        padding-right: 20px;
+        color: #fff;
+        text-align: left;
+        margin-right: 10%;
+    }
+    
+    .main__link__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-row-gap: 40px;
+        max-width: 1500px;
+        height: 100%;
+        text-align: left;
+        padding-top: 50px;
+        /* background-color: #233223; */
+    }
+    
+    .links__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-row-gap: 20%;
+        max-width: 1500px;
+        padding: 0px 10%;
+        text-align: left;
+    }
+    
+    .mail__container {
+        display: grid;
+        grid-template-columns: .15fr 1fr;
+        grid-column-gap: 20px;
+        width: 100%;
+        align-items: center;
+    }
+    
+    .mail__text {
+        color: #fff;
+        padding-top: 4px;
+    }
+    
+    .mail__header {
+        font-weight: bold;
+    }
+    
+    .phone__number__container {
+        display: grid;
+        grid-template-columns: .15fr 1fr;
+        grid-column-gap: 20px;
+    }
+    
+    .external__links__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 20px;
+        max-width: 1500px;
+        margin: 0 0;
+        padding: 0px 30%;
+        height: 100%;
+        align-content: center;
+    }
+    
+}
+
+
+
+/* ----------------------------------------------- */
+/* EMPTY TAB */
+/* ----------------------------------------------- */
+
+.empty  {
+    background: #000000;
+    background: linear-gradient(to right, #161616, #000000);
+    padding: 15rem 0px;
+}
+
+
+
+/* ----------------------------------------------- */
 /* FOOTER TAB */
 /* ----------------------------------------------- */
 
@@ -192,6 +455,7 @@
     cursor: pointer;
     text-decoration: none;
     font-size: 1rem;
+    padding: 10px 0;
 }
 
 
@@ -220,6 +484,8 @@
 .footer__mail {
     color: #fff;
     font-size: 1rem;
+    text-decoration: none;
+    padding: 10px 0;
 }
 
 .website__rights {
