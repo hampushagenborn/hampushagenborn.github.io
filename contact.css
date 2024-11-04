@@ -268,6 +268,8 @@
 }
 
 .mail {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
     text-decoration: none;
     color: #fff;
 }
@@ -299,6 +301,8 @@
 }
 
 .phone__number {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
     text-decoration: none;
     color: #fff;
 }
