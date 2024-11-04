@@ -272,6 +272,12 @@
     color: #fff;
 }
 
+.mail:hover {
+    color: #ffc2d1;
+}
+
+
+
 .phone__number__container {
     display: grid;
     grid-template-columns: .15fr 1fr;
@@ -297,6 +303,10 @@
     color: #fff;
 }
 
+.phone__number:hover {
+    color: #ffc2d1;
+}
+
 .external__links__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -313,8 +323,13 @@
 }
 
 .linkedin__icon {
+    content: url(linkedin_logo_white.png);
     height: auto;
     width: 50px;
+}
+
+.linkedin__icon:hover {
+    content: url(linkedin_logo_hover.png);
 }
 
 .instagram__link {
@@ -322,8 +337,13 @@
 }
 
 .instagram__icon {
+    content: url(white-instagram-icon.png);
     height: auto;
     width: 50px;
+}
+
+.instagram__icon:hover {
+    content: url(instagram-icon_hover.png);
 }
 
 @media screen and (max-width: 960px) { 
@@ -486,6 +506,10 @@
     font-size: 1rem;
     text-decoration: none;
     padding: 10px 0;
+}
+
+.footer__mail:hover {
+    color: #ffc2d1;
 }
 
 .website__rights {
