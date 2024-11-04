@@ -1095,9 +1095,9 @@
     display: grid;
     grid-template-columns: 1fr;
     align-items: safe;
-    /* justify-content: center; */
+    /* justify-content: center; */padding-top: 6rem;
     margin: 0 auto;
-    height: 90%;
+    height: 100%;
     width: 100%;
     max-width: 1500px;
     /* background-color: purple; */
