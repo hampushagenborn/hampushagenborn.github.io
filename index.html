@@ -47,15 +47,13 @@
     <div class="main" id="home">
         <div class="main__container">
 
-            <div class="main__text__container"> 
-                <h1 class="main__heading">Hello There!</h1>
-                <p class="main__description">My name is Hampus Hagenborn! I am a game programmer and a student at Futuregames in Malmö.</p>
-                <p class="main__description">Ever since I played my first game when I was 5 years old, I have always wondered how it all worked. This led me down the path of programming and in later years game programming.</p>
-                <p class="main__description">I enjoy the numerous challenges involved in game programming, but I find working on <span>movement</span> and <span>systems</span> especially enjoyable.</p>
-            </div>
-
-            <div class="main__img__container">
-                <img class="main__image" src="image_of_self.png" draggable="false">
+            <div class="text__link__container">
+                <div class="main__text__container"> 
+                    <h1 class="main__heading">Hello There!</h1>
+                    <p class="main__description">My name is Hampus Hagenborn! I am a game programmer and a student at Futuregames in Malmö.</p>
+                    <p class="main__description">Ever since I played my first game when I was 5 years old, I have always wondered how it all worked. This led me down the path of programming and in later years game programming.</p>
+                    <p class="main__description">I enjoy the numerous challenges involved in game programming, but I find working on <span>movement</span> and <span>systems</span> especially enjoyable.</p>
+                </div>
 
                 <div class="main__link__container">
                     <a href="https://www.linkedin.com/in/hampus-hagenborn-b2131426b/">
@@ -65,6 +63,29 @@
                         <img class="github__link">
                     </a>
                 </div>
+            </div>
+
+            <div class="main__img__container">
+                <img class="main__image" src="image_of_self.png" draggable="false">
+            </div>
+
+        </div>
+    </div>
+    
+    
+    
+    <div class="transition" id="transition">
+        <div class="transition__container">
+
+            <div class="transition__content">
+
+                <a href="#projects" class="transition__link">
+
+                    <p class="transition__text">Scroll for current projects</p>
+                    <img class="transition__image" src="arrow.png">
+
+                </a>
+
             </div>
 
         </div>
@@ -99,25 +120,6 @@
 
 
 
-    <div class="transition" id="transition">
-        <div class="transition__container">
-
-            <div class="transition__content">
-
-                <a href="#projects" class="transition__link">
-
-                    <p class="transition__text">Scroll for current projects</p>
-                    <img class="transition__image" src="arrow.png">
-
-                </a>
-
-            </div>
-
-        </div>
-    </div>
-
-
-
     <div class="specialisation" id="specialisation">
         <div class="specialisation__container">
             <div class="specialisation__header">
@@ -142,7 +144,9 @@
                     </div>
 
                     <div class="movementSystem__img__container">
-                        <img class="movementSystem__image" src="project_elf_poster.png" draggable="false">
+                        <a href="#">
+                            <img class="movementSystem__image" src="WorkInProgress_POSTER.png" draggable="false">
+                        </a>
                     </div>
                 </div>
 
@@ -160,7 +164,9 @@
                     </div>
 
                     <div class="inventorySystem__img__container">
-                        <img class="inventorySystem__image" src="Amplifish_Poster.png" draggable="false">
+                        <a href="#">
+                            <img class="inventorySystem__image" src="WorkInProgress_POSTER.png" draggable="false">
+                        </a>
                     </div>
                 </div>
     
@@ -203,7 +209,9 @@
                             </div>
     
                             <div class="project1__img__container">
-                                <img class="project1__image" src="project_elf_poster.png" draggable="false">
+                                <a href="#">
+                                    <img class="project1__image" src="WorkInProgress_POSTER.png" draggable="false">
+                                </a>
                             </div>
                         </div>
     
@@ -221,7 +229,9 @@
                             </div>
     
                             <div class="project2__img__container">
-                                <img class="project2__image" src="Amplifish_Poster.png" draggable="false">
+                                <a href="#">
+                                    <img class="project2__image" src="WorkInProgress_POSTER.png" draggable="false">
+                                </a>
                             </div>
                         </div>
 
@@ -245,7 +255,9 @@
                             </div>
     
                             <div class="project3__img__container">
-                                <img class="project3__image" src="GP4-POSTER-3.png" draggable="false">
+                                <a href="#">
+                                    <img class="project3__image" src="GP4-POSTER-3.png" draggable="false">
+                                </a>
                             </div>
                         </div>
     
@@ -264,7 +276,9 @@
                             </div>
     
                             <div class="project4__img__container">
-                                <img class="project4__image" src="project_elf_poster.png" draggable="false">
+                                <a href="#">
+                                    <img class="project4__image" src="project_elf_poster.png" draggable="false">
+                                </a>
                             </div>
                         </div>
                         
@@ -281,11 +295,27 @@
     <div class="footer__container">
         <section class="media">
             <div class="media--wrap">
-                <div class="footer__logo">
-                    <a href="https://www.hampushagenborn.com/" id="footer__logo">Hampus Hagenborn</a>
-                    <a href="mailto: hampus0405@gmail.com" class="footer__mail">hampus0405@gmail.com</a>
+                <div class="footer__info">
+                    <div class="footer__text__links">
+                        <a href="https://www.hampushagenborn.com/" id="footer__logo">Hampus Hagenborn</a>
+                        <a href="mailto: hampus0405@gmail.com" class="footer__mail">hampus0405@gmail.com</a>
+                        <a href="tel:+460708771442" class="footer__phone__number">+46708771442</a>
+                    </div>
+
+                    <div class="footer__image__links">
+                        <a href="https://www.linkedin.com/in/hampus-hagenborn-b2131426b/">
+                            <img class="footer__linkedin__link">
+                        </a>
+
+                        <a href="https://github.com/ItsPinkuuu">
+                            <img class="footer__github__link">
+                        </a>
+                    </div>
                 </div>
-                <p class="website__rights">Copyright © 2024, Hampus Hagenborn</p>
+
+                <div class="copyright__container">
+                    <p class="website__rights">Copyright © 2024, Hampus Hagenborn</p>
+                </div>
                 
             </div>
         </section>

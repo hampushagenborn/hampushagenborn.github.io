@@ -1,6 +1,9 @@
-större footer med contact info
+>> Add number, linkedin and github to footer - Done
 
-tydlig call to action - utforma det efter detta
-seperera about och contact page
+>> Add more color to website - In Progress
 
-experimentera med gradients
+>> Switch places for "experience" and "transition" - Done
+
+>> Move linkedin and github buttons on homepage to under main text - Done
+
+>> Add logos to experience text - In Progress

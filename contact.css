@@ -336,18 +336,18 @@
     content: url(linkedin_logo_hover.png);
 }
 
-.instagram__link {
+.github__link {
     width: 54px;
 }
 
-.instagram__icon {
-    content: url(white-instagram-icon.png);
+.github__icon {
+    content: url(github_logo_white.png);
     height: auto;
     width: 50px;
 }
 
-.instagram__icon:hover {
-    content: url(instagram-icon_hover.png);
+.github__icon:hover {
+    content: url(github_logo_hover.png);
 }
 
 @media screen and (max-width: 960px) { 
@@ -472,25 +472,14 @@
     align-items: center;
 }
 
-#footer__logo {
-    color: #fff;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 1rem;
-    padding: 10px 0;
-}
-
-
-
 .media {
     max-width: 2000px;
     width: 100%;
 }
 
 .media--wrap {
-    display: flex;
+    display: grid;
+    grid-template-columns: .1fr 1fr;
     justify-content: space-between;
     align-items: center;
     width: 90%;
@@ -498,11 +487,26 @@
     margin: 4px auto 0 auto;
 }
 
-.media__icons {
-    display: flex;
-    justify-content: space-between;
+.footer__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 2rem;
+}
+
+.footer__text__links {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+
+#footer__logo {
+    color: #fff;
     align-items: center;
-    width: 240px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 0;
 }
 
 .footer__mail {
@@ -516,27 +520,77 @@
     color: #ffc2d1;
 }
 
+.footer__phone__number {
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 10px 0;
+}
+
+.footer__phone__number:hover {
+    color: #ffc2d1;
+}
+
+.footer__image__links {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .1fr .1fr;
+    grid-row-gap: 30px;
+    margin: 10px 0px;
+}
+
+.footer__linkedin__link {
+    content: url(linkedin_logo_white.png);
+    height: auto;
+    width: 30px;
+}
+
+.footer__linkedin__link:hover {
+    content: url(linkedin_logo_hover.png);
+}
+
+.footer__github__link {
+    content: url(github_logo_white.png);
+    height: auto;
+    width: 30px;
+    align-items: end;
+}
+
+.footer__github__link:hover {
+    content: url(github_logo_hover.png);
+}
+
+.copyright__container {
+    text-align: right;
+}
+
 .website__rights {
     color: darkgrey;
     font-size: 1rem;
 }
 
 
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 960px) {
+    
+    .media--wrap {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr .1fr;
+        text-align: center;
+    }
     
     #footer__logo {
         margin-bottom: 0rem;
+    }
 
+    .copyright__container {
+        text-align: center;
     }
 
     .website__rights {
         margin-top: 2rem;
         margin-bottom: 0.5rem;
-        font-size: 0.7rem;
-    }
-
-    .media--wrap {
-        flex-direction: column;
+        font-size: .8rem;
     }
 }
 
