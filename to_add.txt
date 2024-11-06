@@ -1,9 +1,1 @@
->> Add number, linkedin and github to footer - Done
-
 >> Add more color to website - In Progress
-
->> Switch places for "experience" and "transition" - Done
-
->> Move linkedin and github buttons on homepage to under main text - Done
-
->> Add logos to experience text - Done
