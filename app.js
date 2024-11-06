@@ -12,12 +12,6 @@ menu.addEventListener("click", mobileMenu);
 
 
 
-window.addEventListener("scroll", highlightMenu);
-
-window.addEventListener("click", highlightMenu);
-
-
-
 const hideMobileMenu = () => {
     const menuBars = document.querySelector(".is-active")
     if(window.innerWidth <= 768 && menuBars) {
@@ -29,5 +23,3 @@ const hideMobileMenu = () => {
 
 menuLinks.addEventListener("click", hideMobileMenu)
 navLogo.addEventListener("click", hideMobileMenu)
-
-
