@@ -6,4 +6,4 @@
 
 >> Move linkedin and github buttons on homepage to under main text - Done
 
->> Add logos to experience text - In Progress
+>> Add logos to experience text - Done

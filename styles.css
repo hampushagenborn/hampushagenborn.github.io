@@ -503,6 +503,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    grid-column-gap: 100px;
     max-width: 1500px;
     margin: 0 6%;
     text-align: center;
@@ -516,6 +517,22 @@
     color: #fff;
     width: 100%;
     padding: 2rem 0px;
+}
+
+.item__container {
+    display: grid;
+    grid-template-columns: .3fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+    margin: 0px 20px;
+}
+
+.item__image {
+    height: 100%;
+    width: 100%;
+    max-width: 50px;
+    min-width: 50px;
+    object-fit: contain;
 }
 
 @media screen and (max-width: 960px) {
@@ -554,6 +571,7 @@
     .experience__content {
         display: grid;
         grid-template-columns: 1fr;
+        grid-template-rows: repeat(auto-fill, 1fr);
         grid-column-gap: 20px;
         max-width: 1500px;
         margin: 0 0%;
@@ -566,7 +584,8 @@
     .experience__text__container {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 10px;
         max-width: 1500px;
         margin: 0 0%;
         text-align: center;
@@ -576,10 +595,26 @@
     
     .experience__text {
         font-family: "Nanum Brush Script", cursive;
-        font-size: 40px;
+        font-size: 30px;
         color: #fff;
         width: 100%;
         padding: 2rem 0px;
+    }
+
+    .item__container {
+        display: grid;
+        grid-template-columns: .3fr 1fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        margin: 0px 0px;
+    }
+    
+    .item__image {
+        height: 100%;
+        width: 100%;
+        max-width: 50px;
+        min-width: 50px;
+        object-fit: contain;
     }
 
 }
