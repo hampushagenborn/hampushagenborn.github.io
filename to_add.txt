@@ -1,1 +1,8 @@
 >> Add more color to website - In Progress
+
+>> Add project pages:
+ - Amplifish
+ - Project Elf
+ - Mood 666
+ - Inventory System
+ - Movement System

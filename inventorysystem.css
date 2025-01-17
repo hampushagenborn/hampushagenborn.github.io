@@ -173,6 +173,126 @@
 
 
 /* ----------------------------------------------- */
+/* INTRODUCTION TAB */
+/* ----------------------------------------------- */
+
+.introduction {
+    background: #000000;
+    background: linear-gradient(to right, #161616, #000000);
+    padding-top: 10px;
+}
+
+.introduction__container {
+    display: grid;
+    grid-template-rows: .5fr 1fr;
+    grid-row-gap: 5rem;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 90%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.main__introduction__text__container {
+    padding-bottom: 1rem;
+}
+
+.introduction__heading {
+    font-family: "Nanum Brush Script", cursive;
+    font-style: italic;
+    font-size: 60px;
+    margin-bottom: 24px;
+    color: #fff;
+    padding-right: 50px;
+    text-align: center;
+}
+
+.introduction__description {
+    font-size: 18px;
+    padding-top: 5px;
+    padding-right: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.introduction__description span {
+    font-size: 22px;
+    font-family: 'Courier New', Courier, monospace;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #ffc2d1;
+}
+
+.introduction__video__container {
+    display: grid;
+    grid-template-rows: 1fr;
+    justify-content: center;
+}
+
+.introduction__video {
+    width: 800px;
+    height: 450px;
+    border-radius: 1%;
+}
+
+
+
+/* ----------------------------------------------- */
+/* TRANSITION TAB */
+/* ----------------------------------------------- */
+
+.transition {
+    background: #000000;
+    background: linear-gradient(to right, #161616, #000000);
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+.transition__container {
+    display: grid;
+    grid-template-rows: .1fr;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    text-align: center;
+}
+
+.transition__content {
+    display: grid;
+    grid-template-rows: 1fr;
+    max-width: 1500px;
+    margin: 0 auto;
+    height: 100%;
+    width: 1000px;
+    text-align: center;
+    border-top: 2px solid white;
+    /* background-color: #233223; */
+}
+
+.transition__text {
+    font-family: "Nanum Brush Script", cursive;
+    font-size: 2rem;
+    color: #fff;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.transition__image {
+    transform: rotate(90deg);
+    height: auto;
+    width: 50px;
+}
+
+
+
+/* ----------------------------------------------- */
 /* FOOTER TAB */
 /* ----------------------------------------------- */
 
