@@ -632,6 +632,34 @@
 
 
 
+.feature__highlight {
+    background: #000000;
+    background: linear-gradient(to right, #161616, #000000);
+    padding-top: 20px;
+}
+
+.feature__highlight__container {
+    display: grid;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 90%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.language-csharp {
+    width: 898px;
+    height: 701px;
+}
+
+
+
 /* ----------------------------------------------- */
 /* FOOTER TAB */
 /* ----------------------------------------------- */
