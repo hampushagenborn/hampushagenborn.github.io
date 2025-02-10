@@ -221,10 +221,9 @@
 }
 
 .introduction__description span {
-    font-size: 22px;
-    font-family: 'Courier New', Courier, monospace;
-    padding-left: 10px;
-    padding-right: 10px;
+    font-size: 18px;
+    padding-left: 5px;
+    padding-right: 5px;
     color: #ffc2d1;
 }
 
@@ -238,6 +237,69 @@
     width: 800px;
     height: 450px;
     border-radius: 1%;
+}
+
+@media screen and (max-width: 960px) {
+    .introduction {
+        background: #000000;
+        background: linear-gradient(to right, #161616, #000000);
+        padding-top: 20px;
+    }
+    
+    .introduction__container {
+        display: grid;
+        grid-template-rows: 1fr .5fr;
+        grid-row-gap: 3rem;
+        justify-content: center;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        height: 90%;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+    .main__introduction__text__container {
+        padding-bottom: 1rem;
+    }
+    
+    .introduction__heading {
+        font-size: 46px;
+        margin-bottom: 12px;
+        padding-right: 25px;
+    }
+    
+    .introduction__description {
+        font-size: 14px;
+        padding-top: 15px;
+        padding-right: 10px;
+    }
+
+    .introduction__description span {
+        font-size: 14px;
+        padding-left: 5px;
+        padding-right: 5px;
+        color: #ffc2d1;
+    }
+    
+    .introduction__video__container {
+        display: grid;
+        grid-template-rows: 1fr;
+        justify-content: center;
+    }
+    
+    .introduction__video {
+        width: 100%;
+        height: 100%;
+        max-width: 496px;
+        max-height: 279px;
+        min-width: 304px;
+        min-height: 171px;
+        border-radius: 1%;
+    }
 }
 
 
@@ -284,10 +346,32 @@
     padding-bottom: 20px;
 }
 
-.transition__image {
-    transform: rotate(90deg);
-    height: auto;
-    width: 50px;
+@media screen and (max-width: 960px) {
+    .transition__content {
+        display: grid;
+        grid-template-rows: 1fr;
+        max-width: 1500px;
+        margin: 0 auto;
+        height: 100%;
+        min-width: 600px;
+        text-align: center;
+        border-top: 2px solid white;
+        /* background-color: #233223; */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .transition__content {
+        display: grid;
+        grid-template-rows: 1fr;
+        max-width: 1500px;
+        margin: 0 auto;
+        height: 100%;
+        min-width: 300px;
+        text-align: center;
+        border-top: 2px solid white;
+        /* background-color: #233223; */
+    }
 }
 
 
