@@ -6,6 +6,10 @@
     scroll-behavior: smooth;
 }
 
+*::selection {
+    background: #FF69B4;
+}
+
 
 
 /* ----------------------------------------------- */
@@ -561,7 +565,7 @@
 .interactionsys {
     background: #000000;
     background: linear-gradient(to right, #161616, #000000);
-    padding-top: 50px;
+    padding-top: 100px;
     padding-bottom: 200px;
 }
 
@@ -594,10 +598,119 @@
 }
 
 .interactionsys__content__container {
-    margin: 0 auto;
+    margin: 0 10%;
 }
 
 .interactionsys__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-row-gap: 100px;
+    grid-column-gap: 40px;
+    max-width: 1500px;
+    margin: 0 auto;
+    text-align: left;
+    border-radius: 1%;
+    padding: 40px;
+    /* padding-left: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px; */
+    /* padding-right: 40px; */
+    background-color: #222222;
+}
+
+.interactionsys__text__container {
+    /* background-color: #2b5541; */
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-row-gap: 30px;
+}
+
+.interactionsys__text {
+    font-size: 20px;
+    color: #fff;
+    align-items: center;
+}
+
+.interactionsys__minititle__text {
+    font-family: "Nanum Brush Script", cursive;
+    font-size: 40px;
+    color: #fff;
+    align-items: center;
+}
+
+.interactionsys__img__container {
+    /* background-color: #2b5541; */
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-row-gap: 40px;
+}
+
+.interactioncheck__img__container {
+    /* background-color: aqua; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    padding-left: 40px;
+    /* padding-right: 40px; */
+}
+
+.interactioncheck__notfound {
+    width: 200px;
+    height: auto;
+}
+
+.interactioncheck__found {
+    width: 200px;
+    height: auto;
+}
+
+
+
+/* ----------------------------------------------- */
+/* WEIGHT & CAPCITY SYSTEM TAB */
+/* ----------------------------------------------- */
+
+.weightcapacitysys {
+    background: #000000;
+    background: linear-gradient(to right, #161616, #000000);
+    padding-top: 100px;
+    padding-bottom: 200px;
+}
+
+.weightcapacitysys__container {
+    display: grid;
+    grid-template-rows: .3fr 1fr;
+    grid-row-gap: 50px;
+    max-width: 1500px;
+    margin: 0 auto;
+    height: 100%;
+    text-align: left;
+    /* padding-left: 10px; */
+    /* background-color: #233223; */
+}
+
+.weightcapacitysys__header {
+    padding: 0px 100px;
+}
+
+.weightcapacitysys__header__text {
+    background-color: #b94366;
+    font-family: "Nanum Brush Script", cursive;
+    font-size: 60px;
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    text-align: left;
+    border-radius: 10px;
+}
+
+.weightcapacitysys__content__container {
+    margin: 0 10%;
+}
+
+.weightcapacitysys__content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
@@ -613,13 +726,232 @@
     background-color: #222222;
 }
 
-.interactionsys__text__container {
+.weightcapacitysys__text__container {
     /* background-color: #2b5541; */
     display: grid;
     grid-template-rows: 1fr;
 }
 
-.interactionsys__text {
+.weightcapacitysys__text {
+    font-size: 20px;
+    color: #fff;
+    align-items: center;
+}
+
+
+
+/* ----------------------------------------------- */
+/* TOOLTIP TAB */
+/* ----------------------------------------------- */
+
+.tooltip {
+    background: #000000;
+    background: linear-gradient(to right, #161616, #000000);
+    padding-top: 100px;
+    padding-bottom: 200px;
+}
+
+.tooltip__container {
+    display: grid;
+    grid-template-rows: .3fr 1fr;
+    grid-row-gap: 50px;
+    max-width: 1500px;
+    margin: 0 auto;
+    height: 100%;
+    text-align: left;
+    /* padding-left: 10px; */
+    /* background-color: #233223; */
+}
+
+.tooltip__header {
+    padding: 0px 100px;
+}
+
+.tooltip__header__text {
+    background-color: #b94366;
+    font-family: "Nanum Brush Script", cursive;
+    font-size: 60px;
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    text-align: left;
+    border-radius: 10px;
+}
+
+.tooltip__content__container {
+    margin: 0 10%;
+}
+
+.tooltip__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-row-gap: 100px;
+    max-width: 1500px;
+    margin: 0 auto;
+    text-align: left;
+    border-radius: 1%;
+    padding-left: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    /* padding-right: 40px; */
+    background-color: #222222;
+}
+
+.tooltip__text__container {
+    /* background-color: #2b5541; */
+    display: grid;
+    grid-template-rows: 1fr;
+}
+
+.tooltip__text {
+    font-size: 20px;
+    color: #fff;
+    align-items: center;
+}
+
+
+
+/* ----------------------------------------------- */
+/* STACKABLE ITEMS TAB */
+/* ----------------------------------------------- */
+
+.stackableitems {
+    background: #000000;
+    background: linear-gradient(to right, #161616, #000000);
+    padding-top: 100px;
+    padding-bottom: 200px;
+}
+
+.stackableitems__container {
+    display: grid;
+    grid-template-rows: .3fr 1fr;
+    grid-row-gap: 50px;
+    max-width: 1500px;
+    margin: 0 auto;
+    height: 100%;
+    text-align: left;
+    /* padding-left: 10px; */
+    /* background-color: #233223; */
+}
+
+.stackableitems__header {
+    padding: 0px 100px;
+}
+
+.stackableitems__header__text {
+    background-color: #b94366;
+    font-family: "Nanum Brush Script", cursive;
+    font-size: 60px;
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    text-align: left;
+    border-radius: 10px;
+}
+
+.stackableitems__content__container {
+    margin: 0 10%;
+}
+
+.stackableitems__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-row-gap: 100px;
+    max-width: 1500px;
+    margin: 0 auto;
+    text-align: left;
+    border-radius: 1%;
+    padding-left: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    /* padding-right: 40px; */
+    background-color: #222222;
+}
+
+.stackableitems__text__container {
+    /* background-color: #2b5541; */
+    display: grid;
+    grid-template-rows: 1fr;
+}
+
+.stackableitems__text {
+    font-size: 20px;
+    color: #fff;
+    align-items: center;
+}
+
+
+
+/* ----------------------------------------------- */
+/* ITEM SWITCHER TAB */
+/* ----------------------------------------------- */
+
+.itemswitcher {
+    background: #000000;
+    background: linear-gradient(to right, #161616, #000000);
+    padding-top: 100px;
+    padding-bottom: 200px;
+}
+
+.itemswitcher__container {
+    display: grid;
+    grid-template-rows: .3fr 1fr;
+    grid-row-gap: 50px;
+    max-width: 1500px;
+    margin: 0 auto;
+    height: 100%;
+    text-align: left;
+    /* padding-left: 10px; */
+    /* background-color: #233223; */
+}
+
+.itemswitcher__header {
+    padding: 0px 100px;
+}
+
+.itemswitcher__header__text {
+    background-color: #b94366;
+    font-family: "Nanum Brush Script", cursive;
+    font-size: 60px;
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    text-align: left;
+    border-radius: 10px;
+}
+
+.itemswitcher__content__container {
+    margin: 0 10%;
+}
+
+.itemswitcher__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-row-gap: 100px;
+    max-width: 1500px;
+    margin: 0 auto;
+    text-align: left;
+    border-radius: 1%;
+    padding-left: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    /* padding-right: 40px; */
+    background-color: #222222;
+}
+
+.itemswitcher__text__container {
+    /* background-color: #2b5541; */
+    display: grid;
+    grid-template-rows: 1fr;
+}
+
+.itemswitcher__text {
     font-size: 20px;
     color: #fff;
     align-items: center;

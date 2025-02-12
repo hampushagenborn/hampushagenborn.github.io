@@ -6,6 +6,10 @@
     scroll-behavior: smooth;
 }
 
+*::selection {
+    background: #FF69B4;
+}
+
 
 
 /* ----------------------------------------------- */
