@@ -49,7 +49,10 @@
 
             <div class="text__introduction__container">
                 <div class="main__introduction__text__container"> 
-                    <h1 class="introduction__heading">Inventory System</h1>
+                    <div class="introduction__header__container">
+                        <img class="unreal__header__icon" src="unreal_logo_white.png" width="100%" height="100%" draggable="false">
+                        <h1 class="introduction__heading">Inventory System</h1>
+                    </div>
                     <p class="introduction__description">After a couple of months of intense school work, I wanted to work on something of my own and improve my knowledge.</p>
                     <p class="introduction__description">An inventory system made in <span>Unreal Engine</span> and <span>C++</span>.</p>
                     <p class="introduction__description">This system allows for <span>stackable items</span> of <span>various types</span> and sizes plus a <span>carrying capacity</span> and <span>weight system</span>.</p>
@@ -100,19 +103,23 @@
                     </div>
 
                     <div class="item__container">
-                        <a href="#interactionsys" class="feature__button__link">Interaction System</a>
+                        <a href="#interactionsys" class="feature__button__link">Interaction</a>
                     </div>
 
                     <div class="item__container">
-                        <a href="#weightcapacitysys" class="feature__button__link">Weight & Capacity System</a>
+                        <a href="#inventory" class="feature__button__link">Inventory</a>
+                    </div>
+
+                    <div class="item__container">
+                        <a href="#weightcapacitysys" class="feature__button__link">Weight & Capacity</a>
+                    </div>
+                    
+                    <div class="item__container">
+                        <a href="#stackableitems" class="feature__button__link">Stackable Items</a>
                     </div>
 
                     <div class="item__container">
                         <a href="#tooltip" class="feature__button__link">Tooltip</a>
-                    </div>
-
-                    <div class="item__container">
-                        <a href="#stackableitems" class="feature__button__link">Stackable Items</a>
                     </div>
 
                     <div class="item__container">
@@ -128,46 +135,172 @@
 
 
 
-    <div class="interactionsys" id="interactionsys">
-        <div class="interactionsys__container">
+    <div class="itemdata" id="itemdata">
+        <div class="itemdata__container">
 
-            <div class="interactionsys__header">
-                <h1 class="interactionsys__header__text">Interaction System</h1>
+            <div class="itemdata__header">
+                <h1 class="itemdata__header__text">ItemData</h1>
             </div>
 
 
             
+            <div class="itemdata__content__container">
+                <div class="itemdata__content">
+                    <div class="itemdata__struct__container">
+                        <div class="itemdata__struct__text__container">
+                            <h3 class="itemdata__minititle__text">Item Data Struct</h3>
+
+                            <p class="itemdata__text">
+                                I wanted to make the items modular, expandable and clean. 
+                                To do this I made an .h file that is divided into one main struct and multiple other structs and enums that holds the different data. 
+                                For example, I have an enum that has the different qualities/rarities that an item can have (common, rare, epic, etc) 
+                                and another one for what type of item it is (armor, consumable, etc). 
+                                And the other structs are for for example, AssetData which is for what icon and mesh it should have. 
+                                The main struct then puts everything together into one condensed struct that is more viewable when we use it in our data table. 
+                            </p>
+                        </div>
+
+                        <div class="itemdata__struct__img__container">
+                            <img class="itemdata__struct__img" src="itemdata_struct_1.png" width="100%" height="100%" draggable="false">
+                        </div>
+
+                    </div>
+
+                    <div class="itemdata__datatable__container">
+                        <div class="itemdata__datatable__text__container">
+                            <h3 class="itemdata__minititle__text">Data Table</h3>
+
+                            <p class="itemdata__text">
+                                As mentioned, the main struct is used as the base for our Unreal Data Table which is where we make and decide the information of each item. 
+                                This is also the table that our for example pickup blueprint uses. 
+                            </p>
+                        </div>
+
+                        <div class="itemdata__datatable__img__container">
+                            <img class="itemdata__datatable__img" src="itemdata_datatable.png" width="100%" height="100%" draggable="false">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="interactionsys" id="interactionsys">
+        <div class="interactionsys__container">
+
+            <div class="interactionsys__header">
+                <h1 class="interactionsys__header__text">Interaction</h1>
+            </div>
+            
             <div class="interactionsys__content__container">
                 <div class="interactionsys__content">
-                    <div class="interactionsys__text__container">
-                        <p class="interactionsys__text">
+
+                        <p class="interactionsys__text" id="interactionsys__start__text">
                             For the interaction with objects and items I wanted it to be simple but expandable. 
-                            I also wanted to make sure you could only interact with what you were directly looking at.
-                        </p>
-
-                        <p class="interactionsys__text"> 
+                            I also wanted to make sure you could only interact with what you were directly looking at. 
                             To make this possible I decided to divide it into two parts. The interaction check and the actual interaction part. 
-
+                            I added a pink overlay material to visualize when you can interact with it. 
                         </p>
 
-                        <h3 class="interactionsys__minititle__text">Interaction Check</h3>
+                        <div class="interactioncheck__container">
 
-                        <p class="interactionsys__text">
-                            make an interaction check function that uses a simple linetrace that's sent from the camera and straight forward, making sure to follow its rotation, 
-                            to see if you are looking at an interactable object. 
-                            If an interactable object is hit, the linetrace gets the targets interactable data and displays it on an interaction interface. 
+                            <div class="interactioncheck__text__container">
+                                <h3 class="interactionsys__minititle__text">Interaction Check</h3>
+        
+                                <p class="interactionsys__text">
+                                    I created an interaction check function that uses a simple linetrace that's sent from the camera and straight forward, making sure to follow its rotation, 
+                                    to see if you are looking at an interactable object. 
+                                    If an interactable object is hit, the linetrace gets the targets interactable data and displays it on an interaction interface. 
+                                </p>
+                            </div>
+
+                            <div class="interactioncheck__imgvid__container">
+                                <div class="interactioncheck__img__container">
+                                    <img class="interactioncheck__notfound" src="interactable_notfound.png" width="100%" height="100%">
+                                    <img class="interactioncheck__found" src="interactable_found.png" width="100%" height="100%">
+                                </div>
+                                
+                                <div class="interaction__interface__container">
+                                    <video class="interaction__interface__video" width="100%" height="100%" controls autoplay muted loop> 
+                                        <source src="interaction_interface_mp4.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="interaction__container">
+
+                            <div class="interaction__text__container">
+                                <h3 class="interactionsys__minititle__text">The Actual Interaction</h3>
+        
+                                <p class="interactionsys__text">
+                                    When it comes to actually interacting with the objects, I decided to divide it into three functions. 
+                                    BeginInteract(), Interact() and EndInteract(). 
+                                    This is to give the ability to customize the interaction more and give more possibilities and expandability. 
+                                    These function runs when you press the interact button which I have put as the keyboard key 'F'. 
+                                    These three is what the player has. 
+                                    However, I decided to give each interactable object its own Interact() function. 
+                                    More on this later. 
+                                </p>
+
+                                <p class="interactionsys__text">
+                                    As per the name, BeginInteract() is the first function run and does so as the key is being pressed. 
+                                    When it runs it first runs the interaction check function once more and checks if the interaction data matches the current interactable. 
+                                    If this is true it then checks if its a valid object. If these are both true it then runs the Interact() function. 
+                                </p>
+
+                                <p class="interactionsys__text">
+                                    The player Interact() function is pretty simple. All it does is call the Interact() function that the interactable objects has. 
+                                    That's it! 
+                                    This ties into why I divided it. This way I can specify what will happen to each object when its interacted with by giving the Interact() function in said object the functionality. 
+                                    I might want to pickup some types of objects but only inspect some objects and I keep the code organized at the same time. 
+                                </p>
+
+                                <p class="interactionsys__text">
+                                    The same applies to the EndInteract() function. 
+                                    All this function does is call the interactable objects EndInteract() function. 
+                                    As stated above, this is to allow for expandability and customizability. 
+                                </p>
+                            </div>
+
+                            <div class="interaction__imgvid__container">
+                                <video class="interaction__interact__vid" width="100%" height="100%" controls autoplay muted loop> 
+                                    <source src="interaction_interact_mp4.mp4" type="video/mp4">
+                                </video>
+                            </div>
+
+                        </div>
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="inventory" id="inventory">
+        <div class="inventory__container">
+
+            <div class="inventory__header">
+                <h1 class="inventory__header__text">Inventory</h1>
+            </div>
+
+
+            
+            <div class="inventory__content__container">
+                <div class="inventory__content">
+                    <div class="inventory__text__container">
+                        <p class="inventory__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                         </p>
                     </div>
 
-                    <div class="interactionsys__img__container">
-                        <div class="interactioncheck__img__container">
-                            <img class="interactioncheck__notfound" src="interactable_notfound.png" width="100%" height="100%">
-                            <img class="interactioncheck__found" src="interactable_found.png" width="100%" height="100%">
-                        </div>
-
-                        <div>
-
-                        </div>
+                    <div class="inventory__img__container">
+                        
                     </div>
                 </div>
             </div>
@@ -180,7 +313,7 @@
         <div class="weightcapacitysys__container">
 
             <div class="weightcapacitysys__header">
-                <h1 class="weightcapacitysys__header__text">Weight & Capacity System</h1>
+                <h1 class="weightcapacitysys__header__text">Weight & Capacity</h1>
             </div>
 
 
@@ -200,9 +333,36 @@
             </div>
         </div>
     </div>
-
-
-
+    
+    
+    
+    <div class="stackableitems" id="stackableitems">
+        <div class="stackableitems__container">
+            
+            <div class="stackableitems__header">
+                <h1 class="stackableitems__header__text">Stackable Items</h1>
+            </div>
+            
+            
+            
+            <div class="stackableitems__content__container">
+                <div class="stackableitems__content">
+                    <div class="stackableitems__text__container">
+                        <p class="stackableitems__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                    </div>
+                    
+                    <div class="stackableitems__img__container">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
     <div class="tooltip" id="tooltip">
         <div class="tooltip__container">
 
@@ -227,34 +387,7 @@
             </div>
         </div>
     </div>
-
-
-
-    <div class="stackableitems" id="stackableitems">
-        <div class="stackableitems__container">
-
-            <div class="stackableitems__header">
-                <h1 class="stackableitems__header__text">Stackable Items</h1>
-            </div>
-
-
-            
-            <div class="stackableitems__content__container">
-                <div class="stackableitems__content">
-                    <div class="stackableitems__text__container">
-                        <p class="stackableitems__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                    </div>
-
-                    <div class="stackableitems__img__container">
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    
 
 
     <div class="itemswitcher" id="itemswitcher">
