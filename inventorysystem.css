@@ -507,7 +507,7 @@
     transform: translateY(4px);
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1500px) {
     .features__container {
         display: grid;
         grid-template-rows: 1fr;
@@ -518,6 +518,18 @@
         text-align: center;
         /* padding-left: 10px; */
         /* background-color: #233223; */
+    }
+
+    .features__header__text {
+        background-color: #b94366;
+        font-family: "Nanum Brush Script", cursive;
+        font-size: 50px;
+        color: #fff;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 30px;
+        text-align: left;
+        border-radius: 10px;
     }
 
     .features__content {
@@ -538,7 +550,7 @@
         grid-template-rows: repeat(auto-fill, 1fr);
         grid-column-gap: 10px;
         max-width: 1500px;
-        margin: 0 0%;
+        margin: 0 50%;
         text-align: center;
         justify-content: center;
         align-items: center;
@@ -546,6 +558,22 @@
         /* background-color: #222222; */
     }
     
+}
+
+@media screen and (max-width: 1125px) {
+    .features__text__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(auto-fill, 1fr);
+        grid-column-gap: 10px;
+        max-width: 1500px;
+        margin: 0 50%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1%;
+        /* background-color: #222222; */
+    }
 }
 
 @media screen and (max-width: 980px) {
@@ -596,10 +624,10 @@
     .features__text__container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(auto-fill, 1fr);
-        grid-column-gap: 10px;
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 50px;
         max-width: 1500px;
-        margin: 0 0%;
+        margin: 0 50%;
         text-align: center;
         align-items: center;
         border-radius: 1%;
@@ -616,10 +644,25 @@
 
     .item__container {
         display: grid;
-        grid-template-columns: .3fr 1fr;
+        grid-template-columns: 1fr;
         grid-template-rows: 1fr;
         grid-column-gap: 0px;
         margin: 0px 0px;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    .features__text__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(auto-fill, 1fr);
+        grid-column-gap: 0px;
+        max-width: 1500px;
+        margin: 0 50%;
+        text-align: center;
+        border-radius: 1%;
+        /* background-color: #222222; */
     }
 
 }
@@ -650,7 +693,7 @@
 }
 
 .itemdata__header {
-    padding: 0px 100px;
+    padding: 0 100px;
 }
 
 .itemdata__header__text {
@@ -697,7 +740,7 @@
 
 .itemdata__struct__container {
     display: grid;
-    grid-template-rows: .1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-row-gap: 60px;
 }
 
@@ -842,6 +885,77 @@
     cursor: pointer;
 }
 
+@media screen and (max-width: 960px) {
+    .itemdata__header {
+        padding: 0 0px;
+    }
+
+    .itemdata__header__text {
+        background-color: #b94366;
+        font-family: "Nanum Brush Script", cursive;
+        font-size: 50px;
+        color: #fff;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 30px;
+        text-align: left;
+        border-radius: 10px;
+    }
+
+    .itemdata__minititle__text {
+        font-family: "Nanum Brush Script", cursive;
+        font-size: 35px;
+        color: #fff;
+        align-items: center;
+    }
+    
+    .itemdata__text {
+        font-size: 16px;
+        color: #fff;
+        align-items: center;
+        padding-top: 40px;
+    }
+
+    .itemdata__container {
+        display: grid;
+        grid-template-rows: .3fr 5fr;
+        grid-row-gap: 50px;
+        max-width: 1500px;
+        margin: 0 auto;
+        height: 100%;
+        text-align: left;
+        /* padding-left: 10px; */
+        /* background-color: #233223; */
+    }
+
+    .itemdata__struct__container {
+        display: grid;
+        grid-template-rows: 2fr 1fr;
+        grid-row-gap: 60px;
+    }
+
+    .itemdata__datatable__container {
+        display: grid;
+        grid-template-rows: .1fr .4fr;
+        grid-row-gap: 60px;
+    }
+
+    .itemtable__close {
+        position: absolute;
+        top: 100px;
+        right: 50px;
+        color: white;
+        font-size: 40px;
+        transition: 0.3s;
+    }
+
+    .itemtable__modal__content {
+        margin: 200px auto;
+        display: block;
+        width: 400px;
+    }
+}
+
 
 
 /* ----------------------------------------------- */
@@ -868,7 +982,7 @@
 }
 
 .interactionsys__header {
-    padding: 0px 100px;
+    padding: 0 100px;
 }
 
 .interactionsys__header__text {
@@ -1006,6 +1120,36 @@
 }
 
 @media screen and (max-width: 960px) {
+    .interactionsys__header {
+        padding: 0 0px;
+    }
+
+    .interactionsys__header__text {
+        background-color: #b94366;
+        font-family: "Nanum Brush Script", cursive;
+        font-size: 50px;
+        color: #fff;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 30px;
+        text-align: left;
+        border-radius: 10px;
+    }
+
+    .interactionsys__minititle__text {
+        font-family: "Nanum Brush Script", cursive;
+        font-size: 35px;
+        color: #fff;
+        align-items: center;
+    }
+
+    .interactionsys__text {
+        font-size: 16px;
+        color: #fff;
+        align-items: center;
+        padding-top: 40px;
+    }
+
     .interactioncheck__container {
         display: grid;
         grid-template-rows: .3fr 1fr;
@@ -1016,10 +1160,25 @@
 
     .interaction__container {
         display: grid;
-        grid-template-rows: 1.5fr 1fr;
+        grid-template-rows: 3fr 1fr;
         grid-row-gap: 20px;
         grid-template-columns: 1fr;
         grid-column-gap: 0px;
+    }
+
+    .interactioncheck__imgvid__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column-gap: 0px;
+        grid-template-rows: 1fr 1fr;
+        grid-row-gap: 20px;
+    }
+
+    .interaction__interface__container {
+        display: grid;
+        grid-template-rows: 1fr;
+        align-items: center;
+        justify-items: center;
     }
 }
 
@@ -1049,7 +1208,7 @@
 }
 
 .inventory__header {
-    padding: 0px 100px;
+    padding: 0 100px;
 }
 
 .inventory__header__text {
@@ -1096,6 +1255,30 @@
     align-items: center;
 }
 
+@media screen and (max-width: 960px) {
+    .inventory__header {
+        padding: 0 0px;
+    }
+
+    .inventory__header__text {
+        background-color: #b94366;
+        font-family: "Nanum Brush Script", cursive;
+        font-size: 50px;
+        color: #fff;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 30px;
+        text-align: left;
+        border-radius: 10px;
+    }
+
+    .inventory__text {
+        font-size: 16px;
+        color: #fff;
+        align-items: center;
+    }
+}
+
 
 
 /* ----------------------------------------------- */
@@ -1122,7 +1305,7 @@
 }
 
 .weightcapacitysys__header {
-    padding: 0px 100px;
+    padding: 0 100px;
 }
 
 .weightcapacitysys__header__text {
@@ -1169,6 +1352,30 @@
     align-items: center;
 }
 
+@media screen and (max-width: 960px) {
+    .weightcapacitysys__header {
+        padding: 0 0px;
+    }
+
+    .weightcapacitysys__header__text {
+        background-color: #b94366;
+        font-family: "Nanum Brush Script", cursive;
+        font-size: 50px;
+        color: #fff;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 30px;
+        text-align: left;
+        border-radius: 10px;
+    }
+
+    .weightcapacitysys__text {
+        font-size: 16px;
+        color: #fff;
+        align-items: center;
+    }
+}
+
 
 
 /* ----------------------------------------------- */
@@ -1195,7 +1402,7 @@
 }
 
 .stackableitems__header {
-    padding: 0px 100px;
+    padding: 0 100px;
 }
 
 .stackableitems__header__text {
@@ -1242,6 +1449,30 @@
     align-items: center;
 }
 
+@media screen and (max-width: 960px) {
+    .stackableitems__header {
+        padding: 0 0px;
+    }
+
+    .stackableitems__header__text {
+        background-color: #b94366;
+        font-family: "Nanum Brush Script", cursive;
+        font-size: 50px;
+        color: #fff;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 30px;
+        text-align: left;
+        border-radius: 10px;
+    }
+
+    .stackableitems__text {
+        font-size: 16px;
+        color: #fff;
+        align-items: center;
+    }
+}
+
 
 
 /* ----------------------------------------------- */
@@ -1268,7 +1499,7 @@
 }
 
 .tooltip__header {
-    padding: 0px 100px;
+    padding: 0 100px;
 }
 
 .tooltip__header__text {
@@ -1384,6 +1615,54 @@
     cursor: pointer;
 }
 
+@media screen and (max-width: 960px) {
+    .tooltip__header {
+        padding: 0 0px;
+    }
+
+    .tooltip__header__text {
+        background-color: #b94366;
+        font-family: "Nanum Brush Script", cursive;
+        font-size: 50px;
+        color: #fff;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 30px;
+        text-align: left;
+        border-radius: 10px;
+    }
+
+    .tooltip__text {
+        font-size: 16px;
+        color: #fff;
+        align-items: center;
+        padding-top: 40px;
+    }
+
+    .tooltipclass__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column-gap: 0px;
+        grid-template-rows: 1fr 1fr;
+        grid-row-gap: 20px;
+    }
+
+    .tooltipclass__close {
+        position: absolute;
+        top: 100px;
+        right: 50px;
+        color: white;
+        font-size: 40px;
+        transition: 0.3s;
+    }
+
+    .tooltipclass__modal__content {
+        margin: 200px auto;
+        display: block;
+        width: 400px;
+    }
+}
+
 
 
 /* ----------------------------------------------- */
@@ -1410,7 +1689,7 @@
 }
 
 .itemswitcher__header {
-    padding: 0px 100px;
+    padding: 0 100px;
 }
 
 .itemswitcher__header__text {
@@ -1470,6 +1749,43 @@
     height: auto;
     max-width: 1100px;
     min-width: 200px;
+}
+
+@media screen and (max-width: 960px) {
+    .itemswitcher__header {
+        padding: 0 0px;
+    }
+
+    .itemswitcher__header__text {
+        background-color: #b94366;
+        font-family: "Nanum Brush Script", cursive;
+        font-size: 50px;
+        color: #fff;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 30px;
+        text-align: left;
+        border-radius: 10px;
+    }
+
+    .itemswitcher__content {
+        display: grid;
+        grid-template-rows: .3fr 1fr;
+        grid-row-gap: 100px;
+        max-width: 1500px;
+        margin: 0 auto;
+        text-align: left;
+        border-radius: 1%;
+        padding: 40px;
+        background-color: #222222;
+    }
+
+    .itemswitcher__text {
+        font-size: 16px;
+        color: #fff;
+        align-items: center;
+        padding-top: 40px;
+    }
 }
 
 
