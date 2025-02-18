@@ -416,19 +416,38 @@
             <div class="tooltip__header">
                 <h1 class="tooltip__header__text">Tooltip</h1>
             </div>
-
-
             
+
+
             <div class="tooltip__content__container">
                 <div class="tooltip__content">
-                    <div class="tooltip__text__container">
-                        <p class="tooltip__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                    </div>
+                    
+                    <p class="tooltip__text" id="tooltip__start__text">The tooltip is pretty simple.
+                        Pretty much, when the item slot in the inventory panel gets created I also create a tooltip at the same time that stays hidden. 
+                        When a slot is then being hovered over, the tooltip gets initialized and grabs said items information. 
+                    </p>
+                    
+                    <div class="tooltipclass__container">
+                        <div class="tooltipclass__text__container">
 
-                    <div class="tooltip__img__container">
-                        
+                            <h3 class="tooltip__minititle__text">Tooltip Class</h3>
+
+                            <p class="tooltip__text">
+                                The tooltip class is what makes sure the information gets displayed correctly. 
+                                In the tooltip.cpp files NativeConstruct() function, I have a switch that check for what item type is being hovered. 
+                                Depending on what type it is (armor, consumable, weapon), it displays the corresponding information needed. 
+                            </p>
+
+                        </div>
+
+                        <div class="tooltipclass__imgvid__container">
+                            <img class="tooltipclass__img" src="tooltipclass_switch_img.png" width="100%" height="100%" draggable="false">
+                        </div>
+
+                        <div id="tooltipclass__modal" class="tooltipclass__modal">
+                            <span class="tooltipclass__close">&#120;</span>
+                            <img class="tooltipclass__modal__content" id="tooltipclass__modal__img">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -448,14 +467,20 @@
             
             <div class="itemswitcher__content__container">
                 <div class="itemswitcher__content">
-                    <div class="itemswitcher__text__container">
-                        <p class="itemswitcher__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                    </div>
-
-                    <div class="itemswitcher__img__container">
+                    
+                    <p class="itemswitcher__text" id="itemswitcher__start__text">
+                        The item switcher works by adding a PostEditChangePropery() function in the pickup files. 
+                        This function checks for if the Desired Item ID property is changed. 
+                        If its changed it check if that id matches the id of a row in the Item Data Table. 
+                        If these are true, it takes the mesh data from the item in said row and applies it to the pickups mesh. 
+                    </p>
+                    
+                    <div class="itemswitcher__imgvid__container">
+                        <img class="itemswitcher__img" src="itemswitcher_img.png" width="100%" height="100%" draggable="false">
                         
+                        <video class="itemswitcher__vid" width="100%" height="100%" controls autoplay muted loop> 
+                            <source src="item_switcher_mp4.mp4" type="video/mp4">
+                        </video>
                     </div>
                 </div>
             </div>

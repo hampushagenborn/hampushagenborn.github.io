@@ -78,20 +78,38 @@ function auto_showSlides() {
 
 
 
-var modal = document.getElementById("itemtable__modal");
+var itemdata_modal = document.getElementById("itemtable__modal");
 
-var span = document.getElementsByClassName("itemtable__close")[0];
+var itemdata_span = document.getElementsByClassName("itemtable__close")[0];
 
-span.onclick = function() {
-    modal.style.display = "none";
+itemdata_span.onclick = function() {
+    itemdata_modal.style.display = "none";
 }
 
-var images = document.getElementsByClassName("itemdata__datatable__img");
-var modalImg = document.getElementById("itemtable__modal__img");
-var i;
-for (i = 0; i < images.length; i++) {
-    images[i].onclick = function() {
-        modal.style.display = "block";
-        modalImg.src = this.src;
+var itemdata_images = document.getElementsByClassName("itemdata__datatable__img");
+var itemdata_modalImg = document.getElementById("itemtable__modal__img");
+var itemdata;
+for (itemdata = 0; itemdata < itemdata_images.length; itemdata++) {
+    itemdata_images[itemdata].onclick = function() {
+        itemdata_modal.style.display = "block";
+        itemdata_modalImg.src = this.src;
+    }
+}
+
+var tooltip_modal = document.getElementById("tooltipclass__modal");
+
+var tooltip_span = document.getElementsByClassName("tooltipclass__close")[0];
+
+tooltip_span.onclick = function() {
+    tooltip_modal.style.display = "none";
+}
+
+var tooltip_images = document.getElementsByClassName("tooltipclass__img");
+var tooltip_modalImg = document.getElementById("tooltipclass__modal__img");
+var tooltip;
+for (tooltip = 0; tooltip < tooltip_images.length; tooltip++) {
+    tooltip_images[tooltip].onclick = function() {
+        tooltip_modal.style.display = "block";
+        tooltip_modalImg.src = this.src;
     }
 }
