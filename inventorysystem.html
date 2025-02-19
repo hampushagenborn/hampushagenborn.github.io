@@ -111,14 +111,6 @@
                     </div>
 
                     <div class="item__container">
-                        <a href="#weightcapacitysys" class="feature__button__link">Weight & Capacity</a>
-                    </div>
-                    
-                    <div class="item__container">
-                        <a href="#stackableitems" class="feature__button__link">Stackable Items</a>
-                    </div>
-
-                    <div class="item__container">
                         <a href="#tooltip" class="feature__button__link">Tooltip</a>
                     </div>
 
@@ -188,19 +180,19 @@
                                     <img class="itemdata__struct__img" src="itemdata_struct_6.png" width="100%" height="100%" draggable="false">
                                 </div>
 
-                                <a class="struct__prev" onclick="plusSlides(-1)">&#10094;</a>
-                                <a class="struct__next" onclick="plusSlides(1)">&#10095;</a>
+                                <a class="struct__prev" onclick="struct_plusSlides(-1)">&#10094;</a>
+                                <a class="struct__next" onclick="struct_plusSlides(1)">&#10095;</a>
 
                             </div>
                             <br>
 
                             <div style="text-align: center;">
-                                <span class="dot" onclick="currentSlide(1)"></span>
-                                <span class="dot" onclick="currentSlide(2)"></span>
-                                <span class="dot" onclick="currentSlide(3)"></span>
-                                <span class="dot" onclick="currentSlide(4)"></span>
-                                <span class="dot" onclick="currentSlide(5)"></span>
-                                <span class="dot" onclick="currentSlide(6)"></span>
+                                <span class="struct__dot" onclick="struct_currentSlide(1)"></span>
+                                <span class="struct__dot" onclick="struct_currentSlide(2)"></span>
+                                <span class="struct__dot" onclick="struct_currentSlide(3)"></span>
+                                <span class="struct__dot" onclick="struct_currentSlide(4)"></span>
+                                <span class="struct__dot" onclick="struct_currentSlide(5)"></span>
+                                <span class="struct__dot" onclick="struct_currentSlide(6)"></span>
                             </div>
                         </div>
 
@@ -341,13 +333,140 @@
             <div class="inventory__content__container">
                 <div class="inventory__content">
                     <div class="inventory__text__container">
-                        <p class="inventory__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
+                        <div class="inventory__text__content">
+                            <p class="inventory__text" id="inventory__start__text">
+                                This is the main part of this project, the inventory system. 
+                                In this case that also mean that it's the most complex part but I'm going to try and not drag on to much. 
+                            </p>
+    
+                            <p class="inventory__text">
+                                The system is condensed into one component called inventory component. 
+                                This handles everything from weight and capacity to stackable items. 
+                                So how does it work when you add an item to the inventory? 
+                                There are a lot of checks going on when that happens. Lets go through it. 
+                            </p>
+    
+                            <p class="inventory__text">
+                                First when first interact with the pickup item it runs its interact function. 
+                                This function first runs the inventory components HandleAddItem() function. 
+                                This function checks for a few things. 
+                            </p>
+    
+                            <p class="inventory__text">
+                                First, it checks if the item we just picked up is non-stackable. 
+                                Depending on what it is it either runs the HandleNonStackableItems() function or the HandleStackableItems() function. 
+                            </p>
+    
+                            <p class="inventory__text">
+                                No matter what function was run we come to the AddNewItem() function through those functions. 
+                            </p>
+    
+                            <p class="inventory__text">
+                                The AddNewItem() function is the last function that gets run. 
+                                This function finally adds the new item to the inventory content array so that it can be displayed in the inventory. 
+                            </p>
+                        </div>
+
+                        <div class="inventory__text__imgvid__container">
+                            <img class="handleadditem__img" src="HandleAddItem_Img.png" width="100%" height="100%" draggable="false">
+                            <img class="addnewitem__img" src="AddNewItem_Img.png" width="100%" height="100%" draggable="false">
+                        </div>
                     </div>
 
-                    <div class="inventory__img__container">
-                        
+                    <div class="handlestackableitems__container">
+
+                        <div class="handlestackableitems__text__container">
+                            <h3 class="inventory__minititle__text">HandleStackableItems()</h3>
+
+                            <p class="inventory__text">
+                                This function is the biggest one since it needs to check the most stuff. 
+                            </p>
+
+                            <p class="inventory__text">
+                                First we make sure the requested amount added isnt <= 0. 
+                                Then we check if the item we want to add already exists in the inventory and isnt a full stack. 
+                            </p>
+
+                            <p class="inventory__text">
+                                Then in a while loop we first calculate how many of the existing items would be needed to make the next full stack. 
+                                Then we calculate how many we can carry based on weight capacity. 
+                            </p>
+
+                            <p class="inventory__text">
+                                Then as long as the remaining items doesnt overflow the weight capacity, 
+                                we adjust the existing item quantity, inventory total weight and adjust the count the be distributed. 
+                            </p>
+
+                            <p class="inventory__text">
+                                When thats all done we exit the while loop and if there are no more partial stacks then we check if we can add a new stack. 
+                            </p>
+
+                            <p class="inventory__text">
+                                If possible, we add as many of there remaining item quantity that fits in the inventorys weight capacity. 
+                            </p>
+
+                            <p class="inventory__text">
+                                If there is still more items to distribute but the weight limit is reached then we adjust the input item and add a new stack with as many that can be held. 
+                            </p>
+
+                            <p class="inventory__text">
+                                Otherwise, we add the full remainder of the stack. 
+                            </p>
+                        </div>
+
+                        <div class="handlestackableitems__slideshow__container">
+
+                            <div class="handlestackableitems__slideshow__container">
+
+                                <div class="handlestackableitems__imgslide fade">
+                                    <img class="handlestackableitems__img" src="HandleStackableItems_Img1.png" width="100%" height="100%" draggable="false">
+                                </div>
+    
+                                <div class="handlestackableitems__imgslide fade">
+                                    <img class="handlestackableitems__img" src="HandleStackableItems_Img2.png" width="100%" height="100%" draggable="false">
+                                </div>
+    
+                                <div class="handlestackableitems__imgslide fade">
+                                    <img class="handlestackableitems__img" src="HandleStackableItems_Img3.png" width="100%" height="100%" draggable="false">
+                                </div>
+
+                                <a class="handlestackableitems__prev" onclick="inventory_plusSlides(-1)">&#10094;</a>
+                                <a class="handlestackableitems__next" onclick="inventory_plusSlides(1)">&#10095;</a>
+
+                            </div>
+                            <br>
+
+                            <div style="text-align: center;">
+                                <span class="inventory__dot" onclick="inventory_currentSlide(1)"></span>
+                                <span class="inventory__dot" onclick="inventory_currentSlide(2)"></span>
+                                <span class="inventory__dot" onclick="inventory_currentSlide(3)"></span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="handlenonstackableitems__container">
+
+                        <div class="handlenonstackableitems__text__container">
+                            <h3 class="inventory__minititle__text">HandleNonStackableItems()</h3>
+
+                            <p class="inventory__text">
+                                If the item isnt stackable then we run the HandleNonStackableItems(). 
+                            </p>
+
+                            <p class="inventory__text">
+                                This function first does a lot of checks to make sure there arnt any errors. 
+                                It check if the item has a valid weight, if the item will overflow the weight capacity and if it would overflow the slot capacity. 
+                            </p>
+
+                            <p class="inventory__text">
+                                If everything is good on those fronts then we run the AddNewItem() function.  
+                            </p>
+                        </div>
+
+                        <div class="handlenonstackableitems__imgvid__container">
+                            <img class="handlenonstackableitems__img" src="HandleNonStackableItems_Img.png" width="100%" height="100%" draggable="false">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -356,60 +475,6 @@
 
 
 
-    <div class="weightcapacitysys" id="weightcapacitysys">
-        <div class="weightcapacitysys__container">
-
-            <div class="weightcapacitysys__header">
-                <h1 class="weightcapacitysys__header__text">Weight & Capacity</h1>
-            </div>
-
-
-            
-            <div class="weightcapacitysys__content__container">
-                <div class="weightcapacitysys__content">
-                    <div class="weightcapacitysys__text__container">
-                        <p class="weightcapacitysys__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                    </div>
-
-                    <div class="weightcapacitysys__img__container">
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    
-    
-    <div class="stackableitems" id="stackableitems">
-        <div class="stackableitems__container">
-            
-            <div class="stackableitems__header">
-                <h1 class="stackableitems__header__text">Stackable Items</h1>
-            </div>
-            
-            
-            
-            <div class="stackableitems__content__container">
-                <div class="stackableitems__content">
-                    <div class="stackableitems__text__container">
-                        <p class="stackableitems__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                    </div>
-                    
-                    <div class="stackableitems__img__container">
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    
-    
     <div class="tooltip" id="tooltip">
         <div class="tooltip__container">
 

@@ -29,48 +29,94 @@ navLogo.addEventListener("click", hideMobileMenu)
 
 
 
-let slideIndex = 0;
-auto_showSlides();
+let struct_slideIndex = 0;
+struct_auto_showSlides();
 
-function plusSlides(n) {
-    showSlides(slideIndex += n);
+function struct_plusSlides(n) {
+    struct_showSlides(struct_slideIndex += n);
 }
 
-function currentSlide(n) {
-    showSlides(slideIndex = n);
+function struct_currentSlide(n) {
+    struct_showSlides(struct_slideIndex = n);
 }
 
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("struct__imgslide");
-    let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+function struct_showSlides(n) {
+    let struct;
+    let struct_slides = document.getElementsByClassName("struct__imgslide");
+    let struct_dots = document.getElementsByClassName("struct__dot");
+    if (n > struct_slides.length) {struct_slideIndex = 1}
+    if (n < 1) {struct_slideIndex = struct_slides.length}
+    for (struct = 0; struct < struct_slides.length; struct++) {
+        struct_slides[struct].style.display = "none";
     }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
+    for (struct = 0; struct < struct_dots.length; struct++) {
+        struct_dots[struct].className = struct_dots[struct].className.replace(" active", "");
     }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
+    struct_slides[struct_slideIndex-1].style.display = "block";
+    struct_dots[struct_slideIndex-1].className += " active";
 }
 
-function auto_showSlides() {
-    let i;
-    let slides = document.getElementsByClassName("struct__imgslide");
-    let dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
+function struct_auto_showSlides() {
+    let struct;
+    let struct_slides = document.getElementsByClassName("struct__imgslide");
+    let struct_dots = document.getElementsByClassName("struct__dot");
+    for (struct = 0; struct < struct_slides.length; struct++) {
+        struct_slides[struct].style.display = "none";
     }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
+    for (struct = 0; struct < struct_dots.length; struct++) {
+        struct_dots[struct].className = struct_dots[struct].className.replace(" active", "");
     }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
-    setTimeout(auto_showSlides, 5000);
+    struct_slideIndex++;
+    if (struct_slideIndex > struct_slides.length) {struct_slideIndex = 1}
+    struct_slides[struct_slideIndex-1].style.display = "block";
+    struct_dots[struct_slideIndex-1].className += " active";
+    setTimeout(struct_auto_showSlides, 5000);
+}
+
+
+
+let inventory_slideIndex = 0;
+inventory_auto_showSlides();
+
+function inventory_plusSlides(n) {
+    inventory_showSlides(inventory_slideIndex += n);
+}
+
+function inventory_currentSlide(n) {
+    inventory_showSlides(inventory_slideIndex = n);
+}
+
+function inventory_showSlides(n) {
+    let inv;
+    let inv_slides = document.getElementsByClassName("handlestackableitems__imgslide");
+    let inv_dots = document.getElementsByClassName("inventory__dot");
+    if (n > inv_slides.length) {inventory_slideIndex = 1}
+    if (n < 1) {inventory_slideIndex = inv_slides.length}
+    for (inv = 0; inv < inv_slides.length; inv++) {
+        inv_slides[inv].style.display = "none";
+    }
+    for (inv = 0; inv < inv_dots.length; inv++) {
+        inv_dots[inv].className = inv_dots[inv].className.replace(" active", "");
+    }
+    inv_slides[inventory_slideIndex-1].style.display = "block";
+    inv_dots[inventory_slideIndex-1].className += " active";
+}
+
+function inventory_auto_showSlides() {
+    let inv;
+    let inv_slides = document.getElementsByClassName("handlestackableitems__imgslide");
+    let inv_dots = document.getElementsByClassName("inventory__dot");
+    for (inv = 0; inv < inv_slides.length; inv++) {
+        inv_slides[inv].style.display = "none";
+    }
+    for (inv = 0; inv < inv_dots.length; inv++) {
+        inv_dots[inv].className = inv_dots[inv].className.replace(" active", "");
+    }
+    inventory_slideIndex++;
+    if (inventory_slideIndex > inv_slides.length) {inventory_slideIndex = 1}
+    inv_slides[inventory_slideIndex-1].style.display = "block";
+    inv_dots[inventory_slideIndex-1].className += " active";
+    setTimeout(inventory_auto_showSlides, 5000);
 }
 
 
