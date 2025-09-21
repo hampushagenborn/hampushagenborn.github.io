@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hampus Hagenborn | Meadgard</title>
+    <link rel="stylesheet" href="meadgard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Water+Brush&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ff476b5fda.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="sakura-flower.png">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="https://www.hampushagenborn.com/" id="navbar__logo">Hampus Hagenborn</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="https://www.hampushagenborn.com/" class="navbar__links" id="home-page">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="projects.html" class="navbar__links" id="links-page">Projects</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="about.html" class="navbar__links" id="about-page">About/CV</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="contact.html" class="navbar__links" id="contact-page">Contact</a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <div class="introduction" id="home">
+        <div class="introduction__container">
+            
+            <div class="text__introduction__container">
+                <div class="main__introduction__text__container"> 
+                    <h1 class="introduction__heading">Oddiko - Meadgard</h1>
+                    <p class="introduction__description">For 7 months, I interned as a game programmer at <span>Oddiko</span>, where I worked on their first Unity project, <span>Meadgard</span>.</p>
+                    <p class="introduction__description">This page is a little showcase of the tasks I got to work on during my time there and the ways I contributed to the game's development.</p>
+                </div>
+            </div>
+
+            <div class="introduction__video__container">
+                <video class="introduction__video" width="100%" height="100%" controls autoplay muted loop> 
+                    <source src="Meadgard Teaser Trailer - Oddiko.mp4" type="video/mp4">
+                </video>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="transition" id="transition">
+        <div class="transition__container">
+
+            <div class="transition__content">
+
+                <p class="transition__text"></p>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="tasks" id="tasks">
+        <div class="tasks__container">
+
+            <div class="tasks__header">
+                <h1 class="tasks__header__text">Tasks</h1>
+            </div>
+
+
+
+            <div class="tasks__content">
+
+                <div class="tasks__text__container">
+                    <div class="item__container">
+                        <a href="#interactable_sign" class="tasks__button__link">Interactable Sign</a>
+                    </div>
+
+                    <div class="item__container">
+                        <a href="#guest_ordering_logic" class="tasks__button__link">Improved Guest Ordering Logic</a>
+                    </div>
+                    
+                    <div class="item__container">
+                        <a href="#decoration_system" class="tasks__button__link">Decoration System</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="interactable_sign" id="interactable_sign">
+        <div class="interactable_sign__container">
+
+            <div class="interactable_sign__header">
+                <h1 class="interactable_sign__header__text">Interactable Sign</h1>
+            </div>
+
+
+            
+            <div class="interactable_sign__content__container">
+                <div class="interactable_sign__content">
+                    <div class="interactable_sign__item__container">
+                        <div class="interactable_sign__text__container">
+                            <p class="interactable_sign__text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+
+                        <div class="interactable_sign__img__container">
+                            <img class="interactable_sign__img" src="item_switcher_gif.gif" width="100%" height="100%" draggable="false">
+                        </div>
+
+                        <div id="interactable_sign__modal" class="interactable_sign__modal">
+                            <span class="interactable_sign__close">&#120;</span>
+                            <img class="interactable_sign__modal__content" id="interactable_sign__modal__img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+    <div class="guest_ordering_logic" id="guest_ordering_logic">
+        <div class="guest_ordering_logic__container">
+
+            <div class="guest_ordering_logic__header">
+                <h1 class="guest_ordering_logic__header__text">Improved Guest Ordering Logic</h1>
+            </div>
+
+
+            
+            <div class="guest_ordering_logic__content__container">
+                <div class="guest_ordering_logic__content">
+                    <div class="guest_ordering_logic__item__container">
+                        <div class="guest_ordering_logic__text__container">
+                            <p class="guest_ordering_logic__text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+
+                        <div class="guest_ordering_logic__img__container">
+                            <img class="guest_ordering_logic__img" src="item_switcher_gif.gif" width="100%" height="100%" draggable="false">
+                        </div>
+
+                        <div id="guest_ordering_logic__modal" class="guest_ordering_logic__modal">
+                            <span class="guest_ordering_logic__close">&#120;</span>
+                            <img class="guest_ordering_logic__modal__content" id="guest_ordering_logic__modal__img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="decoration_system" id="decoration_system">
+        <div class="decoration_system__container">
+
+            <div class="decoration_system__header">
+                <h1 class="decoration_system__header__text">Decoration System</h1>
+            </div>
+
+
+            
+            <div class="decoration_system__content__container">
+                <div class="decoration_system__content">
+                    <div class="decoration_system__item__container">
+                        <div class="decoration_system__text__container">
+                            <p class="decoration_system__text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+
+                        <div class="decoration_system__img__container">
+                            <img class="decoration_system__img" src="item_switcher_gif.gif" width="100%" height="100%" draggable="false">
+                        </div>
+
+                        <div id="decoration_system__modal" class="decoration_system__modal">
+                            <span class="decoration_system__close">&#120;</span>
+                            <img class="decoration_system__modal__content" id="decoration_system__modal__img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="footer__container">
+        <section class="media">
+            <div class="media--wrap">
+                <div class="footer__info">
+                    <div class="footer__text__links">
+                        <a href="https://www.hampushagenborn.com/" id="footer__logo">Hampus Hagenborn</a>
+                        <a href="mailto: hampus0405@gmail.com" class="footer__mail">hampus0405@gmail.com</a>
+                        <a href="tel:+460708771442" class="footer__phone__number">+46708771442</a>
+                    </div>
+
+                    <div class="footer__image__links">
+                        <a href="https://www.linkedin.com/in/hampus-hagenborn-b2131426b/">
+                            <img class="footer__linkedin__link">
+                        </a>
+
+                        <a href="https://github.com/ItsPinkuuu">
+                            <img class="footer__github__link">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="copyright__container">
+                    <p class="website__rights">Copyright &#169; 2025, Hampus Hagenborn</p>
+                </div>
+                
+            </div>
+        </section>
+    </div>
+
+    <script src="meadgard.js"></script>
+</body>
+</html>
