@@ -1,8 +1,9 @@
->> Add more color to website - In Progress
-
 >> Add project pages:
  - Movement System
  - Meadgard
+
+>> On Hold:
+ - Add more color to website
 
 >> Potential removal:
  - Amplifish

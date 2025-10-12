@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Water+Brush&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/ff476b5fda.js" crossorigin="anonymous"></script>
-    <link rel="icon" href="sakura-flower.png">
+    <link rel="icon" href="General/sakura-flower.png">
 </head>
 <body>
     <nav class="navbar">
@@ -41,6 +41,135 @@
             </ul>
         </div>
     </nav>
+
+
+
+    <div class="introduction" id="home">
+        <div class="introduction__container">
+
+            <div class="text__introduction__container">
+                <div class="main__introduction__text__container"> 
+                    <div class="introduction__header__container">
+                        <img class="unreal__header__icon" src="General/unreal_logo_white.png" width="100%" height="100%" draggable="false">
+                        <h1 class="introduction__heading">Movement System</h1>
+                    </div>
+                    <p class="introduction__description">This is a custom first-person movement system I built in <span>Unreal Engine 5</span> using <span>C++</span> as my graduation project.</p>
+                    <p class="introduction__description">It's made to feel <span>smooth</span>, <span>responsive</span>, and <span>fluid</span>, with mechanics like double jump, dash, wall-running, ledge climbing, crouching, and sliding.</p>
+                    <p class="introduction__description">The goal was to create a movement setup that feels great to control and can easily be expanded with new abilities or traversal options.</p>
+                </div>
+
+            </div>
+
+            <div class="introduction__video__container">
+                <video class="introduction__video" width="100%" height="100%" controls autoplay muted loop> 
+                    <source src="InvSys_Trailer_mp4.mp4" type="video/mp4">
+                </video>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="transition" id="transition">
+        <div class="transition__container">
+
+            <div class="transition__content">
+
+                <p class="transition__text"></p>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="features" id="features">
+        <div class="features__container">
+
+            <div class="features__header">
+                <h1 class="features__header__text">Features</h1>
+            </div>
+
+
+
+            <div class="features__content">
+
+                <div class="features__text__container">
+                    <div class="item__container">
+                        <a href="#doublejump" class="feature__button__link">Double Jump</a>
+                    </div>
+
+                    <div class="item__container">
+                        <a href="#" class="feature__button__link">Dash</a>
+                    </div>
+
+                    <div class="item__container">
+                        <a href="#" class="feature__button__link">Wall-Run</a>
+                    </div>
+
+                    <div class="item__container">
+                        <a href="#" class="feature__button__link">Ledge Climb</a>
+                    </div>
+
+                    <div class="item__container">
+                        <a href="#" class="feature__button__link">Crouch</a>
+                    </div>
+
+                    <div class="item__container">
+                        <a href="#" class="feature__button__link">Sliding</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="doublejump" id="doublejump">
+        <div class="doublejump__container">
+
+            <div class="doublejump__header">
+                <h1 class="doublejump__header__text">Double Jump</h1>
+            </div>
+
+
+            
+            <div class="doublejump__content__container">
+                <div class="doublejump__content">
+                    <div class="doublejump__struct__container">
+                        <div class="doublejump__struct__text__container">
+
+                            <p class="doublejump__text">
+                                I built the double jump as an extension of Unreal's character movement, 
+                                aiming to make it feel responsive and flexible 
+                                while working seamlessly with other movement features like wall-running, dashing, and ledge climbing.
+                            </p>
+
+                            <p class="doublejump__text">
+                                The logic is pretty straightforward, the character keeps track of whether it's grounded and if a midair jump is still available. 
+                                On a jump input, it checks those states and decides whether to perform a regular jump or launch the player midair for a second jump.
+                            </p>
+                        </div>
+
+                        <div class="doublejump__struct__img__container">
+                            <img class="doublejump__img" src="Movement_System/DoubleJump_1.png" width="100%" height="100%" draggable="false">
+                        </div>
+
+                    </div>
+
+                    <div class="doublejump__struct__container">
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 

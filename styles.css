@@ -260,23 +260,23 @@
 }
 
 .linkedin__link {
-    content: url(linkedin_logo_white.png);
+    content: url(General/linkedin_logo_white.png);
     height: auto;
     width: 50px;
 }
 
 .linkedin__link:hover {
-    content: url(linkedin_logo_hover.png);
+    content: url(General/linkedin_logo_hover.png);
 }
 
 .github__link {
-    content: url(github_logo_white.png);
+    content: url(General/github_logo_white.png);
     height: auto;
     width: 50px;
 }
 
 .github__link:hover {
-    content: url(github_logo_hover.png);
+    content: url(General/github_logo_hover.png);
 }
 
 .highlight {

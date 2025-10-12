@@ -173,6 +173,638 @@
 
 
 /* ----------------------------------------------- */
+/* INTRODUCTION TAB */
+/* ----------------------------------------------- */
+
+.introduction {
+    background: #000000;
+    background: linear-gradient(to right, #161616, #000000);
+    padding-top: 10px;
+}
+
+.introduction__container {
+    display: grid;
+    grid-template-rows: .5fr 1fr;
+    grid-row-gap: 5rem;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 90%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.main__introduction__text__container {
+    padding-bottom: 1rem;
+}
+
+.introduction__header__container {
+    display: grid;
+    grid-template-columns: .6fr 1fr;
+    grid-column-gap: 40px;
+    margin-bottom: 24px;
+}
+
+.introduction__heading {
+    font-family: "Nanum Brush Script", cursive;
+    font-style: italic;
+    font-size: 60px;
+    /* margin-bottom: 24px; */
+    color: #fff;
+    padding-right: 50px;
+    text-align: left;
+}
+
+.unreal__header__icon {
+    max-width: 75px;
+    min-width: 75px;
+    object-fit: contain;
+    justify-self: right;
+}
+
+.introduction__description {
+    font-size: 18px;
+    padding-top: 5px;
+    padding-right: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.introduction__description span {
+    font-size: 18px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #ffc2d1;
+}
+
+.introduction__video__container {
+    display: grid;
+    grid-template-rows: 1fr;
+    justify-content: center;
+}
+
+.introduction__video {
+    width: 800px;
+    height: 450px;
+    border-radius: 1%;
+}
+
+@media screen and (max-width: 960px) {
+    .introduction {
+        background: #000000;
+        background: linear-gradient(to right, #161616, #000000);
+        padding-top: 20px;
+    }
+    
+    .introduction__container {
+        display: grid;
+        grid-template-rows: 1fr .5fr;
+        grid-row-gap: 3rem;
+        justify-content: center;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        height: 90%;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+    .main__introduction__text__container {
+        padding-bottom: 1rem;
+    }
+
+    .introduction__header__container {
+        grid-template-columns: .2fr 1fr;
+        grid-column-gap: 20px;
+    }
+    
+    .introduction__heading {
+        font-size: 36px;
+        margin-bottom: 12px;
+        padding-right: 25px;
+    }
+
+    .unreal__header__icon {
+        max-width: 45px;
+        min-width: 45px;
+        object-fit: contain;
+        justify-self: right;
+    }
+    
+    .introduction__description {
+        font-size: 14px;
+        padding-top: 15px;
+        padding-right: 10px;
+    }
+
+    .introduction__description span {
+        font-size: 14px;
+        padding-left: 5px;
+        padding-right: 5px;
+        color: #ffc2d1;
+    }
+    
+    .introduction__video__container {
+        display: grid;
+        grid-template-rows: 1fr;
+        justify-content: center;
+    }
+    
+    .introduction__video {
+        width: 100%;
+        height: 100%;
+        max-width: 496px;
+        max-height: 279px;
+        min-width: 304px;
+        min-height: 171px;
+        border-radius: 1%;
+    }
+}
+
+
+
+/* ----------------------------------------------- */
+/* TRANSITION TAB */
+/* ----------------------------------------------- */
+
+.transition {
+    background: #000000;
+    background: linear-gradient(to right, #161616, #000000);
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+.transition__container {
+    display: grid;
+    grid-template-rows: .1fr;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    text-align: center;
+}
+
+.transition__content {
+    display: grid;
+    grid-template-rows: 1fr;
+    max-width: 1500px;
+    margin: 0 auto;
+    height: 100%;
+    max-width: 1000px;
+    text-align: center;
+    border-top: 2px solid white;
+    /* background-color: #233223; */
+}
+
+.transition__text {
+    font-family: "Nanum Brush Script", cursive;
+    font-size: 2rem;
+    color: #fff;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+@media screen and (max-width: 960px) {
+    .transition__content {
+        display: grid;
+        grid-template-rows: 1fr;
+        max-width: 1500px;
+        margin: 0 auto;
+        height: 100%;
+        min-width: 600px;
+        text-align: center;
+        border-top: 2px solid white;
+        /* background-color: #233223; */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .transition__content {
+        display: grid;
+        grid-template-rows: 1fr;
+        max-width: 1500px;
+        margin: 0 auto;
+        height: 100%;
+        min-width: 300px;
+        text-align: center;
+        border-top: 2px solid white;
+        /* background-color: #233223; */
+    }
+}
+
+
+
+/* ----------------------------------------------- */
+/* FEATURES TAB */
+/* ----------------------------------------------- */
+
+.features {
+    background: #000000;
+    background: linear-gradient(to right, #161616, #000000);
+    padding-top: 50px;
+    padding-bottom: 200px;
+}
+
+.features__container {
+    display: grid;
+    grid-template-rows: .7fr 1fr;
+    max-width: 1500px;
+    margin: 0 auto;
+    height: 100%;
+    text-align: left;
+    /* padding-left: 10px; */
+    /* background-color: #233223; */
+}
+
+.features__header {
+    padding: 0px 100px;
+}
+
+.features__header__text {
+    background-color: #b94366;
+    font-family: "Nanum Brush Script", cursive;
+    font-size: 60px;
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    text-align: left;
+    border-radius: 10px;
+}
+
+.features__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 20px;
+    max-width: 1500px;
+    margin: 0 6%;
+    height: 100%;
+    text-align: center;
+    /* background-color: #233223; */
+}
+
+.features__text__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+    margin: 0px 10%;
+    max-width: 1500px;
+    text-align: center;
+    border-radius: 1%;
+    /* background-color: #222222; */
+}
+
+.features__text {
+    font-family: "Nanum Brush Script", cursive;
+    font-size: 40px;
+    color: #fff;
+    width: 100%;
+    padding: 2rem 0px;
+}
+
+.item__container {
+    display: grid;
+    grid-template-rows: 1fr;
+    margin: 0px 20px;
+}
+
+.feature__button__link {
+    font-size: 24px;
+    width: 250px;
+    height: 75px;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 0px;
+    cursor: pointer;
+    outline: none;
+    background-color: #d04c73;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #742a40;
+    transition: 0.1s;
+}
+
+.feature__button__link:hover {
+    background-color: #b94366
+}
+
+.feature__button__link:active {
+    background-color: #b94366;
+    box-shadow: 0 5px #451926;
+    transform: translateY(4px);
+}
+
+@media screen and (max-width: 1500px) {
+    .features__container {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-row-gap: 40px;
+        max-width: 1500px;
+        margin: 0 auto;
+        height: 100%;
+        text-align: center;
+        /* padding-left: 10px; */
+        /* background-color: #233223; */
+    }
+
+    .features__header__text {
+        background-color: #b94366;
+        font-family: "Nanum Brush Script", cursive;
+        font-size: 50px;
+        color: #fff;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 30px;
+        text-align: left;
+        border-radius: 10px;
+    }
+
+    .features__content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column-gap: 20px;
+        max-width: 1500px;
+        margin: 0 0%;
+        padding: 0px 10%;
+        height: 100%;
+        text-align: center;
+        /* background-color: #233223; */
+    }
+
+    .features__text__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(auto-fill, 1fr);
+        grid-column-gap: 10px;
+        max-width: 1500px;
+        margin: 0 50%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1%;
+        /* background-color: #222222; */
+    }
+    
+}
+
+@media screen and (max-width: 1125px) {
+    .features__text__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(auto-fill, 1fr);
+        grid-column-gap: 10px;
+        max-width: 1500px;
+        margin: 0 50%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1%;
+        /* background-color: #222222; */
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .features {
+        background: #000000;
+        background: linear-gradient(to right, #161616, #000000);
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+    }
+    
+    .features__container {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-row-gap: 40px;
+        max-width: 1500px;
+        margin: 0 auto;
+        height: 100%;
+        text-align: center;
+        /* padding-left: 10px; */
+        /* background-color: #233223; */
+    }
+    
+    .features__header {
+        padding: 0px 0px;
+    }
+    
+    .features__header__text {
+        font-size: 50px;
+        color: #fff;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 30px;
+        text-align: left;
+    }
+    
+    .features__content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column-gap: 20px;
+        max-width: 1500px;
+        margin: 0 0%;
+        padding: 0px 10%;
+        height: 100%;
+        text-align: center;
+        /* background-color: #233223; */
+    }
+    
+    .features__text__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 50px;
+        max-width: 1500px;
+        margin: 0 50%;
+        text-align: center;
+        align-items: center;
+        border-radius: 1%;
+        /* background-color: #222222; */
+    }
+    
+    .features__text {
+        font-family: "Nanum Brush Script", cursive;
+        font-size: 30px;
+        color: #fff;
+        width: 100%;
+        padding: 2rem 0px;
+    }
+
+    .item__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        margin: 0px 0px;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    .features__text__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(auto-fill, 1fr);
+        grid-column-gap: 0px;
+        max-width: 1500px;
+        margin: 0 50%;
+        text-align: center;
+        border-radius: 1%;
+        /* background-color: #222222; */
+    }
+
+}
+
+
+
+/* ----------------------------------------------- */
+/* DOUBLE JUMP TAB */
+/* ----------------------------------------------- */
+
+.doublejump {
+    background: #000000;
+    background: linear-gradient(to right, #161616, #000000);
+    padding-top: 100px;
+    padding-bottom: 200px;
+}
+
+.doublejump__container {
+    display: grid;
+    grid-template-rows: .3fr 5fr;
+    grid-row-gap: 50px;
+    max-width: 1500px;
+    margin: 0 auto;
+    height: 100%;
+    text-align: left;
+    /* padding-left: 10px; */
+    /* background-color: #233223; */
+}
+
+.doublejump__header {
+    padding: 0 100px;
+}
+
+.doublejump__header__text {
+    background-color: #b94366;
+    font-family: "Nanum Brush Script", cursive;
+    font-size: 60px;
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    text-align: left;
+    border-radius: 10px;
+}
+
+.doublejump__content__container {
+    margin: 0 10%;
+}
+
+.doublejump__content {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 100px;
+    max-width: 1500px;
+    margin: 0 auto;
+    text-align: left;
+    border-radius: 1%;
+    padding: 40px;
+    background-color: #222222;
+}
+
+.doublejump__minititle__text {
+    font-family: "Nanum Brush Script", cursive;
+    font-size: 40px;
+    color: #fff;
+    align-items: center;
+}
+
+.doublejump__text {
+    font-size: 20px;
+    color: #fff;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.doublejump__struct__container {
+    display: grid;
+    grid-template-rows: .5fr 1fr;
+    grid-row-gap: 60px;
+}
+
+.doublejump__struct__img {
+    max-width: 500px;
+    min-width: 200px;
+    height: auto;
+    object-fit: contain;
+}
+
+@media screen and (max-width: 960px) {
+    .doublejump__header {
+        padding: 0 0px;
+    }
+
+    .doublejump__header__text {
+        background-color: #b94366;
+        font-family: "Nanum Brush Script", cursive;
+        font-size: 50px;
+        color: #fff;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 30px;
+        text-align: left;
+        border-radius: 10px;
+    }
+
+    .doublejump__minititle__text {
+        font-family: "Nanum Brush Script", cursive;
+        font-size: 35px;
+        color: #fff;
+        align-items: center;
+    }
+    
+    .doublejump__text {
+        font-size: 16px;
+        color: #fff;
+        align-items: center;
+        padding-top: 40px;
+    }
+
+    .doublejump__content__container {
+        margin: 0;
+    }
+
+    .doublejump__container {
+        display: grid;
+        grid-template-rows: .3fr 5fr;
+        grid-row-gap: 50px;
+        max-width: 1500px;
+        margin: 0 auto;
+        height: 100%;
+        text-align: left;
+        /* padding-left: 10px; */
+        /* background-color: #233223; */
+    }
+
+    .itemdata__struct__container {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-row-gap: 60px;
+    }
+}
+
+
+
+/* ----------------------------------------------- */
 /* FOOTER TAB */
 /* ----------------------------------------------- */
 
