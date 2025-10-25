@@ -1899,24 +1899,24 @@
 }
 
 .footer__linkedin__link {
-    content: url(linkedin_logo_white.png);
+    content: url(../General/linkedin_logo_white.png);
     height: auto;
     width: 30px;
 }
 
 .footer__linkedin__link:hover {
-    content: url(linkedin_logo_hover.png);
+    content: url(../General/linkedin_logo_hover.png);
 }
 
 .footer__github__link {
-    content: url(github_logo_white.png);
+    content: url(../General/github_logo_white.png);
     height: auto;
     width: 30px;
     align-items: end;
 }
 
 .footer__github__link:hover {
-    content: url(github_logo_hover.png);
+    content: url(../General/github_logo_hover.png);
 }
 
 .copyright__container {
