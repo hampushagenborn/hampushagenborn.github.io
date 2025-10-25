@@ -1206,6 +1206,188 @@
 
 
 /* ----------------------------------------------- */
+/* LEDGE CLIMB TAB */
+/* ----------------------------------------------- */
+
+.ledge_climb {
+    background: #000000;
+    background: linear-gradient(to right, #161616, #000000);
+    padding-top: 100px;
+    padding-bottom: 200px;
+}
+
+.ledge_climb__container {
+    display: grid;
+    grid-template-rows: .3fr 5fr;
+    grid-row-gap: 50px;
+    max-width: 1500px;
+    margin: 0 auto;
+    height: 100%;
+    text-align: left;
+    /* padding-left: 10px; */
+    /* background-color: #233223; */
+}
+
+.ledge_climb__header {
+    padding: 0 100px;
+}
+
+.ledge_climb__header__text {
+    background-color: #b94366;
+    font-family: "Nanum Brush Script", cursive;
+    font-size: 60px;
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    text-align: left;
+    border-radius: 10px;
+}
+
+.ledge_climb__content__container {
+    margin: 0 10%;
+}
+
+.ledge_climb__content {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-row-gap: 40px;
+    max-width: 1500px;
+    margin: 0 auto;
+    text-align: left;
+    border-radius: 1%;
+    padding: 40px;
+    background-color: #222222;
+}
+
+.ledge_climb__text {
+    font-size: 20px;
+    color: #fff;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.ledge_climb__text span {
+    font-size: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #ffc2d1;
+}
+
+#ledge_climb__start__text {
+    padding-top: 0px;
+}
+
+.ledge_climb__logic__container {
+    display: grid;
+    grid-template-rows: 2fr .3fr .3fr 1fr .2fr;
+    grid-row-gap: 20px;
+}
+
+.ledge_climb__findledge__container {
+    display: grid;
+    grid-template-rows: .2fr .5fr .2fr .5fr;
+    grid-row-gap: 40px;
+}
+
+.ledge_climb__attemptclimb__container {
+    display: grid;
+    grid-template-rows: .2fr .5fr;
+    grid-row-gap: 40px;
+}
+
+.ledge_climb__switchcase__container {
+    display: grid;
+    grid-template-rows: .2fr 1fr;
+    grid-row-gap: 40px;
+}
+
+.ledge_climb__dontclimb__container {
+    display: grid;
+    grid-template-rows: .2fr 1fr;
+    grid-row-gap: 40px;
+}
+
+.ledge_climb__img__container {
+    display: grid;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.ledge_climb__jump {
+    min-width: 200px;
+    max-width: 800px;
+    height: auto;
+}
+
+.ledge_climb__textvid__container {
+    display: grid;
+    grid-template-rows: .2fr 1fr;
+    grid-row-gap: 20px;
+}
+
+.ledge_climb__vid__container {
+    display: grid;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.ledge_climb__demonstration__vid {
+    max-width: 800px;
+    min-width: 200px;
+    height: auto;
+}
+
+@media screen and (max-width: 960px) {
+    .ledge_climb__header {
+        padding: 0 0px;
+    }
+
+    .ledge_climb__header__text {
+        background-color: #b94366;
+        font-family: "Nanum Brush Script", cursive;
+        font-size: 50px;
+        color: #fff;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 30px;
+        text-align: left;
+        border-radius: 10px;
+    }
+    
+    .ledge_climb__text {
+        font-size: 16px;
+        color: #fff;
+        align-items: center;
+        padding-top: 40px;
+    }
+
+    .ledge_climb__content__container {
+        margin: 0;
+    }
+
+    .ledge_climb__container {
+        display: grid;
+        grid-template-rows: .3fr 5fr;
+        grid-row-gap: 50px;
+        max-width: 1500px;
+        margin: 0 auto;
+        height: 100%;
+        text-align: left;
+        /* padding-left: 10px; */
+        /* background-color: #233223; */
+    }
+}
+
+
+
+
+
+
+
+/* ----------------------------------------------- */
 /* FOOTER TAB */
 /* ----------------------------------------------- */
 

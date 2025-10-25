@@ -367,7 +367,103 @@
                         </div>
 
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+
+
+    <div class="ledge_climb" id="ledge_climb">
+        <div class="ledge_climb__container">
+            <div class="ledge_climb__header">
+                <h1 class="ledge_climb__header__text">Ledge Climb</h1>
+            </div>
+
+            <div class="ledge_climb__content__container">
+                <div class="ledge_climb__content">
+
+                    <p class="ledge_climb__text" id="ledge_climb__start__text">
+                        The ledge climb system lets the player automatically grab and pull up onto a ledge while falling near a climbable surface. 
+                        It's designed to feel smooth and contextual, you don't have to press anything; if you're jumping toward a ledge, the character naturally grabs it and climbs up.
+                    </p>
+
+                    <div class="ledge_climb__logic__container">
+                        
+                        <div class="ledge_climb__findledge__container">
+                            <p class="ledge_climb__text">
+                                The logic is driven by two line traces every frame inside <span>FindLedge()</span>, one low and one high, 
+                                that check if there's a climbable wall in front of the player but no obstacle above it. 
+                                This ensures the character can actually pull up without hitting geometry.
+                            </p>
+
+                            <div class="ledge_climb__img__container">
+                                <img class="ledge_climb__jump" src="LedgeClimb_FindLedge1.png" width="100%" height="100%">
+                            </div>
+
+                            <p class="ledge_climb__text">
+                                If the bottom trace hits (meaning there's a wall directly in front of you) but the top trace doesn't 
+                                (meaning there's open space above it), and you're currently falling, the system triggers a climb.
+                            </p>
+
+                            <div class="ledge_climb__img__container">
+                                <img class="ledge_climb__jump" src="LedgeClimb_FindLedge2.png" width="100%" height="100%">
+                            </div>
+                        </div>
+
+                        <p class="ledge_climb__text">
+                            When the climb starts, the player's velocity is frozen and the movement component is disabled temporarily by switching the state to <span>Eps_Climbing</span>.
+                            The actual climb motion uses <span>UKismetSystemLibrary::MoveComponentTo()</span>, which smoothly interpolates the player's root component up and forward to the top of the ledge. 
+                            This gives a clean animation-like motion without needing a full animation montage.
+                        </p>
+
+                        <div class="ledge_climb__attemptclimb__container">
+                            <p class="ledge_climb__text">
+                                <span>AttemptClimb()</span> simply sets <span>bCanClimb</span> to true so the climb can't retrigger mid-animation.
+                            </p>
+
+                            <div class="ledge_climb__img__container">
+                                <img class="ledge_climb__jump" src="LedgeClimb_AttemptClimb.png" width="100%" height="100%">
+                            </div>
+                        </div>
+
+                        <div class="ledge_climb__switchcase__container">
+                            <p class="ledge_climb__text">
+                                Once the climb finishes (after ClimbTime seconds), 
+                                <span>CheckPlayerState()</span> detects that the climb duration has passed and calls <span>DontClimb()</span>, resetting the flag and returning control to the player.
+                            </p>
+
+                            <div class="ledge_climb__img__container">
+                                <img class="ledge_climb__jump" src="LedgeClimb_SwitchCase.png" width="100%" height="100%">
+                            </div>
+                        </div>
+
+                        <div class="ledge_climb__dontclimb__container">
+                            <p class="ledge_climb__text">
+                                Finally, <span>DontClimb()</span> just re-enables normal movement again.
+                            </p>
+
+                            <div class="ledge_climb__img__container">
+                                <img class="ledge_climb__jump" src="LedgeClimb_DontClimb.png" width="100%" height="100%">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="ledge_climb__textvid__container">
+
+                        <p class="ledge_climb__text">
+                            Overall, this system is designed for consistency and readability, instead of relying on animations or complex IK, it uses pure movement logic with line traces and component motion.
+                            It integrates naturally with the rest of the movement suite, for example, you can jump toward a wall, wall-run briefly, then grab a ledge and pull up, all in one continuous flow.
+                        </p>
+
+                        <div class="ledge_climb__vid__container">
+                            <video class="ledge_climb__demonstration__vid" width="100%" height="100%" controls autoplay muted loop> 
+                                <source src="Report_Video_LedgeClimb.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
