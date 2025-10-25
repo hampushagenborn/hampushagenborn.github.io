@@ -102,7 +102,7 @@
                     </div>
 
                     <div class="item__container">
-                        <a href="#" class="feature__button__link">Dash</a>
+                        <a href="#dash" class="feature__button__link">Dash</a>
                     </div>
 
                     <div class="item__container">
@@ -136,33 +136,137 @@
             <div class="doublejump__header">
                 <h1 class="doublejump__header__text">Double Jump</h1>
             </div>
-
-
             
             <div class="doublejump__content__container">
                 <div class="doublejump__content">
-                    <div class="doublejump__struct__container">
-                        <div class="doublejump__struct__text__container">
+                    
+                    <p class="doublejump__text" id="doublejump__start__text">
+                        I built this double jump system as an extension of Unreal's character movement, 
+                        aiming to make it feel responsive and flexible while working seamlessly with other movement features 
+                        like wall-running, dashing, and ledge climbing.
+                    </p>
 
-                            <p class="doublejump__text">
-                                I built the double jump as an extension of Unreal's character movement, 
-                                aiming to make it feel responsive and flexible 
-                                while working seamlessly with other movement features like wall-running, dashing, and ledge climbing.
-                            </p>
-
+                    <div class="doublejump__logic__container">
+                        
+                        <div class="doublejump__jump__container">
                             <p class="doublejump__text">
                                 The logic is pretty straightforward, the character keeps track of whether it's grounded and if a midair jump is still available. 
                                 On a jump input, it checks those states and decides whether to perform a regular jump or launch the player midair for a second jump.
                             </p>
+    
+                            <div class="doublejump__img__container">
+                                <img class="doublejump__jump" src="Movement_System/DoubleJump_1.png" width="100%" height="100%">
+                            </div>
                         </div>
 
-                        <div class="doublejump__struct__img__container">
-                            <img class="doublejump__img" src="Movement_System/DoubleJump_1.png" width="100%" height="100%" draggable="false">
+                        <div class="doublejump__land__container">
+                            <p class="doublejump__text">
+                                When the player lands, the states reset automatically, re-enabling dashing and grounded movement:
+                            </p>
+    
+                            <div class="doublejump__img__container">
+                                <img class="doublejump__land" src="Movement_System/DoubleJump_2.png" width="100%" height="100%">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="doublejump__textvid__container">
+
+                        <p class="doublejump__text">
+                            I kept the system simple and modular so it can easily tie into other abilities. 
+                            For example, jumping off a wall-run re-enables the double jump and dash, letting the player chain moves together smoothly. 
+                            It's a small feature, but it adds a ton of freedom and flow to the overall movement system.
+                        </p>
+
+                        <div class="doublejump__vid__container">
+                            <video class="doublejump__demonstration__vid" width="100%" height="100%" controls autoplay muted loop> 
+                                <source src="Movement_System/Report_Video_DoubleJump.mp4" type="video/mp4">
+                            </video>
                         </div>
 
                     </div>
 
-                    <div class="doublejump__struct__container">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="dash" id="dash">
+        <div class="dash__container">
+
+            <div class="dash__header">
+                <h1 class="dash__header__text">Dashing</h1>
+            </div>
+            
+            <div class="dash__content__container">
+                <div class="dash__content">
+                    
+                    <p class="dash__text" id="dash__start__text">
+                        The dash system is built to feel quick, responsive, and readable. 
+                        It gives the player a burst of speed in their movement direction while keeping full control over how it connects to other abilities like wall-running or sliding.
+                    </p>
+
+                    <div class="dash__logic__container">
+                        
+                        <div class="dash__start__container">
+                            <p class="dash__text">
+                                When the dash input is triggered, the character checks a few key conditions before dashing: 
+                                it can't dash while already dashing, wall-running, crouching, or if the dash is still on cooldown. 
+                                Once cleared, it determines the dash direction — either from the player's current movement input or their velocity if they're already in motion.
+                                The dash uses manual interpolation instead of physics forces, which gives smoother, more predictable control over timing, distance, and FOV effects.
+                            </p>
+
+                            <div class="dash__img__container">
+                                <img class="dash__jump" src="Movement_System/Dash_Start.png" width="100%" height="100%">
+                            </div>
+                        </div>
+
+                        <div class="dash__tick__container">
+                            <p class="dash__text">
+                                While dashing, the character's position is linearly interpolated between the start and end points each frame in <span>Tick()</span>, creating a smooth motion independent of physics:
+                            </p>
+    
+                            <div class="dash__img__container">
+                                <img class="dash__land" src="Movement_System/Dash_Tick.png" width="100%" height="100%">
+                            </div>
+                        </div>
+
+                        <div class="dash__stop__container">
+                            <p class="dash__text">
+                                When the dash ends, gravity and normal movement resume immediately.
+                            </p>
+    
+                            <div class="dash__img__container">
+                                <img class="dash__land" src="Movement_System/Dash_Stop.png" width="100%" height="100%">
+                            </div>
+                        </div>
+
+                        <div class="dash__reset__container">
+                            <p class="dash__text">
+                                The dash cooldown resets only when grounded, preventing players from endlessly chaining dashes in midair.
+                            </p>
+    
+                            <div class="dash__img__container">
+                                <img class="dash__land" src="Movement_System/Dash_Reset.png" width="100%" height="100%">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dash__textvid__container">
+
+                        <p class="dash__text">
+                            Overall, this system focuses on player control and flow. 
+                            It's intentionally lightweight and blends seamlessly into other abilities. You can dash out of a wall-run, 
+                            double jump during a dash, or slide right after landing, and it all feels fluid and connected.
+                        </p>
+
+                        <div class="dash__vid__container">
+                            <video class="dash__demonstration__vid" width="100%" height="100%" controls autoplay muted loop> 
+                                <source src="Movement_System/Report_Video_Dash.mp4" type="video/mp4">
+                            </video>
+                        </div>
 
                     </div>
 
@@ -195,7 +299,7 @@
                 </div>
 
                 <div class="copyright__container">
-                    <p class="website__rights">Copyright © 2025, Hampus Hagenborn</p>
+                    <p class="website__rights">Copyright &#169; <script>document.write(new Date().getFullYear())</script>, Hampus Hagenborn</p>
                 </div>
                 
             </div>
