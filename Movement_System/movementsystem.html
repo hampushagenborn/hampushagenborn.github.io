@@ -62,7 +62,7 @@
 
             <div class="introduction__video__container">
                 <video class="introduction__video" width="100%" height="100%" controls autoplay muted loop> 
-                    <source src="InvSys_Trailer_mp4.mp4" type="video/mp4">
+                    <source src="MovSys_Trailer_mp4.mp4" type="video/mp4">
                 </video>
             </div>
 
@@ -114,11 +114,7 @@
                     </div>
 
                     <div class="item__container">
-                        <a href="#crouch" class="feature__button__link">Crouch</a>
-                    </div>
-
-                    <div class="item__container">
-                        <a href="#sliding" class="feature__button__link">Sliding</a>
+                        <a href="#crouchslide" class="feature__button__link">Crouch & Sliding</a>
                     </div>
 
                 </div>
@@ -376,6 +372,7 @@
 
     <div class="ledge_climb" id="ledge_climb">
         <div class="ledge_climb__container">
+
             <div class="ledge_climb__header">
                 <h1 class="ledge_climb__header__text">Ledge Climb</h1>
             </div>
@@ -471,6 +468,127 @@
 
 
 
+    <div class="crouchslide" id="crouchslide">
+        <div class="crouchslide__container">
+            
+            <div class="crouchslide__header">
+                <h1 class="crouchslide__header__text">Crouch & Sliding</h1>
+            </div>
+
+            <div class="crouchslide__content__container">
+                <div class="crouchslide__content">
+
+                    <p class="crouchslide__text" id="crouchslide__start__text">
+                        The crouch system lets the player switch seamlessly between standing, crouching, and sliding states depending on movement speed and player input. 
+                        It's designed to feel responsive and dynamic, similar to movement systems in fast-paced shooters like Apex Legends.
+                    </p>
+
+                    <div class="crouchslide__logic__container">
+
+                        <div class="crouchslide__begincrouch__container">
+                            <p class="crouchslide__text">
+                                The crouch system is handled through a combination of height interpolation, camera offset, and movement state control.
+                                When the player presses the crouch input, the code checks if they're eligible to crouch, meaning they aren't already crouching, sliding, wall-running, or dashing. 
+                                If they're moving fast enough forward, the same input triggers a slide instead.
+                            </p>
+
+                            <div class="crouchslide__img__container">
+                                <img class="crouchslide__jump" src="Crouch_BeginCrouch.png" width="100%" height="100%">
+                            </div>
+
+                        </div>
+
+                        <div class="crouchslide__endcrouch__container">
+                            <p class="crouchslide__text">
+                                When the player releases the crouch key, <span>EndCrouch()</span> resets the crouch state, but only if the player can stand (i.e., there's no obstacle above their head). 
+                                The system uses a vertical line trace to check this before transitioning back to standing.
+                            </p>
+
+                            <div class="crouchslide__img__container">
+                                <img class="crouchslide__jump" src="Crouch_EndCrouch.png" width="100%" height="100%">
+                            </div>
+
+                        </div>
+
+                        <div class="crouchslide__canstand__container">
+                            <p class="crouchslide__text">
+                                The <span>CanStand()</span> function performs that vertical trace from the character's capsule upwards to ensure there's enough room.
+                            </p>
+
+                            <div class="crouchslide__img__container">
+                                <img class="crouchslide__jump" src="Crouch_CanStand.png" width="100%" height="100%">
+                            </div>
+
+                        </div>
+
+                        <div class="crouchslide__crouchheightchange__container">
+                            <p class="crouchslide__text">
+                                The visual and physical height transitions happen through the <span>CrouchHeightChange()</span> function, 
+                                which smoothly interpolates both the camera height and capsule collider height toward their crouched or standing values. 
+                                This keeps the motion grounded and realistic instead of snapping between poses.
+                            </p>
+
+                            <div class="crouchslide__img__container">
+                                <img class="crouchslide__jump" src="Crouch_CrouchHeightChange.png" width="100%" height="100%">
+                            </div>
+
+                        </div>
+
+                        <div class="crouchslide__startsliding__container">
+                            <p class="crouchslide__text">
+                                If the player is sprinting and crouches, the system triggers a slide instead.
+                                <span>StartSliding()</span> launches the player forward, lowers friction, and widens the camera FOV to emphasize speed.
+                            </p>
+
+                            <div class="crouchslide__img__container">
+                                <img class="crouchslide__jump" src="Sliding_StartSliding.png" width="100%" height="100%">
+                            </div>
+
+                        </div>
+
+                        <div class="crouchslide__stopsliding__container">
+                            <p class="crouchslide__text">
+                                When the slide ends, friction and FOV are reset.
+                            </p>
+
+                            <div class="crouchslide__img__container">
+                                <img class="crouchslide__jump" src="Sliding_StopSliding.png" width="100%" height="100%">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="crouchslide__textvid__container">
+
+                        <p class="crouchslide__text">
+                            In short, the crouch system isn't just a toggle. 
+                            It's a layered movement state that connects with the rest of the character's abilities. 
+                            You can sprint into a slide, jump mid-slide into a wall-run, or cancel a crouch into a dash, all without breaking the flow or camera continuity.
+                        </p>
+
+                        <div class="crouchslide__vid__container">
+                            <video class="crouchslide__demonstration__vid" width="100%" height="100%" controls autoplay muted loop> 
+                                <source src="Report_Video_Crouch.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                        <div class="crouchslide__vid__container">
+                            <video class="crouchslide__demonstration__vid" width="100%" height="100%" controls autoplay muted loop> 
+                                <source src="Report_Video_Sliding.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
     <div class="footer__container">
         <section class="media">
             <div class="media--wrap">
@@ -500,6 +618,6 @@
         </section>
     </div>
 
-    <script src="app.js"></script>
+    <script src="movementsystem.js"></script>
 </body>
 </html>
