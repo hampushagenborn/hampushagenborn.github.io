@@ -106,19 +106,19 @@
                     </div>
 
                     <div class="item__container">
-                        <a href="#" class="feature__button__link">Wall-Run</a>
+                        <a href="#wall_run" class="feature__button__link">Wall-Run</a>
                     </div>
 
                     <div class="item__container">
-                        <a href="#" class="feature__button__link">Ledge Climb</a>
+                        <a href="#ledge_climb" class="feature__button__link">Ledge Climb</a>
                     </div>
 
                     <div class="item__container">
-                        <a href="#" class="feature__button__link">Crouch</a>
+                        <a href="#crouch" class="feature__button__link">Crouch</a>
                     </div>
 
                     <div class="item__container">
-                        <a href="#" class="feature__button__link">Sliding</a>
+                        <a href="#sliding" class="feature__button__link">Sliding</a>
                     </div>
 
                 </div>
@@ -161,7 +161,7 @@
 
                         <div class="doublejump__land__container">
                             <p class="doublejump__text">
-                                When the player lands, the states reset automatically, re-enabling dashing and grounded movement:
+                                When the player lands, the states reset automatically, re-enabling dashing and grounded movement.
                             </p>
     
                             <div class="doublejump__img__container">
@@ -225,7 +225,7 @@
 
                         <div class="dash__tick__container">
                             <p class="dash__text">
-                                While dashing, the character's position is linearly interpolated between the start and end points each frame in <span>Tick()</span>, creating a smooth motion independent of physics:
+                                While dashing, the character's position is linearly interpolated between the start and end points each frame in <span>Tick()</span>, creating a smooth motion independent of physics.
                             </p>
     
                             <div class="dash__img__container">
@@ -265,6 +265,104 @@
                         <div class="dash__vid__container">
                             <video class="dash__demonstration__vid" width="100%" height="100%" controls autoplay muted loop> 
                                 <source src="Movement_System/Report_Video_Dash.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="wall_run" id="wall_run">
+        <div class="wall_run__container">
+
+            <div class="dash__header">
+                <h1 class="dash__header__text">Wall Run</h1>
+            </div>
+
+            <div class="wall_run__content__container">
+                <div class="wall_run__content">
+                    <p class="wall_run__text" id="wall_run__start__text">
+                        The wall-run system lets the player run along vertical surfaces while maintaining smooth control over momentum, 
+                        gravity, and camera tilt. I built it to feel fluid and natural, something you can easily transition into from a jump, 
+                        then out of into a dash or double jump, without losing movement flow.
+                    </p>
+
+                    <div class="wall_run__logic__container">
+                        
+                        <div class="wall_run__update__container">
+                            <p class="wall_run__text">
+                                The system constantly checks for valid walls around the player using line traces to the left and right. 
+                                If a wall is detected within range and its normal isn't too steep or flat, the player "sticks" to it and starts wall-running in the appropriate direction.
+                            </p>
+
+                            <div class="wall_run__img__container">
+                                <img class="wall_run__jump" src="Movement_System/WallRun_Update.png" width="100%" height="100%">
+                            </div>
+                        </div>
+
+                        <div class="wall_run__checkforwall__container">
+                            <p class="wall_run__text">
+                                <span>CheckForWall()</span> handles all the detection logic. It performs a series of traces to both sides of the player to determine if there's a suitable wall for running. 
+                                If it finds one, it sets the wall's normal, determines the run direction (left or right), and triggers the stick-to-wall logic.
+                            </p>
+
+                            <div class="wall_run__img__container">
+                                <img class="wall_run__jump" src="Movement_System/WallRun_CheckForWall1.png" width="100%" height="100%">
+                            </div>
+                            <div class="wall_run__img__container">
+                                <img class="wall_run__jump" src="Movement_System/WallRun_CheckForWall2.png" width="100%" height="100%">
+                            </div>
+                        </div>
+
+                        <div class="wall_run__sticktowall__container">
+                            <p class="wall_run__text">
+                                Once a valid wall is found, the player is both pushed toward the surface and launched along it using <span>LaunchCharacter()</span>. 
+                                This keeps the player glued to the wall while allowing them to move horizontally.
+                            </p>
+
+                            <div class="wall_run__img__container">
+                                <img class="wall_run__jump" src="Movement_System/WallRun_PlayerStickToWall.png" width="100%" height="100%">
+                            </div>
+                        </div>
+
+                        <div class="wall_run__cameratilt__container">
+                            <p class="wall_run__text">
+                                While running, the camera tilts dynamically depending on which side of the wall the player is on, 
+                                giving a strong sense of motion and spatial awareness.
+                            </p>
+
+                            <div class="wall_run__img__container">
+                                <img class="wall_run__jump" src="Movement_System/WallRun_CameraTilt.png" width="100%" height="100%">
+                            </div>
+                        </div>
+
+                        <div class="wall_run__stopwallrun__container">
+                            <p class="wall_run__text">
+                                If the player jumps off or loses the wall, StopWallRun() resets all flags and restores normal gravity.
+                            </p>
+
+                            <div class="wall_run__img__container">
+                                <img class="wall_run__jump" src="Movement_System/WallRun_StopWallRun.png" width="100%" height="100%">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wall_run__textvid__container">
+
+                        <p class="wall_run__text">
+                            The system also has a temporary suppression mechanic, which prevents instantly reattaching to the same wall right after jumping off. 
+                            This keeps the motion clean and prevents jittery transitions. Overall, the wall-run system is designed around freedom and momentum. It connects seamlessly with dashing, 
+                            double jumping, and sliding, allowing the player to chain moves together without breaking flow.
+                        </p>
+
+                        <div class="wall_run__vid__container">
+                            <video class="wall_run__demonstration__vid" width="100%" height="100%" controls autoplay muted loop> 
+                                <source src="Movement_System/Report_Video_WallRun.mp4" type="video/mp4">
                             </video>
                         </div>
 
