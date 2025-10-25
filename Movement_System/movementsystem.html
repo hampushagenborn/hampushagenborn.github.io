@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hampus Hagenborn | Movement System</title>
+    <link rel="stylesheet" href="movementsystem.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Water+Brush&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ff476b5fda.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="../General/sakura-flower.png">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="https://www.hampushagenborn.com/" id="navbar__logo">Hampus Hagenborn</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="https://www.hampushagenborn.com/" class="navbar__links" id="home-page">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="../Projects/projects.html" class="navbar__links" id="links-page">Projects</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="../About/about.html" class="navbar__links" id="about-page">About/CV</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="../Contact/contact.html" class="navbar__links" id="contact-page">Contact</a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <div class="introduction" id="home">
+        <div class="introduction__container">
+
+            <div class="text__introduction__container">
+                <div class="main__introduction__text__container"> 
+                    <div class="introduction__header__container">
+                        <img class="unreal__header__icon" src="../General/unreal_logo_white.png" width="100%" height="100%" draggable="false">
+                        <h1 class="introduction__heading">Movement System</h1>
+                    </div>
+                    <p class="introduction__description">This is a custom first-person movement system I built in <span>Unreal Engine 5</span> using <span>C++</span> as my graduation project.</p>
+                    <p class="introduction__description">It's made to feel <span>smooth</span>, <span>responsive</span>, and <span>fluid</span>, with mechanics like double jump, dash, wall-running, ledge climbing, crouching, and sliding.</p>
+                    <p class="introduction__description">The goal was to create a movement setup that feels great to control and can easily be expanded with new abilities or traversal options.</p>
+                </div>
+
+            </div>
+
+            <div class="introduction__video__container">
+                <video class="introduction__video" width="100%" height="100%" controls autoplay muted loop> 
+                    <source src="MovSys_Trailer_mp4.mp4" type="video/mp4">
+                </video>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="transition" id="transition">
+        <div class="transition__container">
+
+            <div class="transition__content">
+
+                <p class="transition__text"></p>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="features" id="features">
+        <div class="features__container">
+
+            <div class="features__header">
+                <h1 class="features__header__text">Features</h1>
+            </div>
+
+
+
+            <div class="features__content">
+
+                <div class="features__text__container">
+                    <div class="item__container">
+                        <a href="#doublejump" class="feature__button__link">Double Jump</a>
+                    </div>
+
+                    <div class="item__container">
+                        <a href="#dash" class="feature__button__link">Dash</a>
+                    </div>
+
+                    <div class="item__container">
+                        <a href="#wall_run" class="feature__button__link">Wall-Run</a>
+                    </div>
+
+                    <div class="item__container">
+                        <a href="#ledge_climb" class="feature__button__link">Ledge Climb</a>
+                    </div>
+
+                    <div class="item__container">
+                        <a href="#crouchslide" class="feature__button__link">Crouch & Sliding</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="doublejump" id="doublejump">
+        <div class="doublejump__container">
+
+            <div class="doublejump__header">
+                <h1 class="doublejump__header__text">Double Jump</h1>
+            </div>
+            
+            <div class="doublejump__content__container">
+                <div class="doublejump__content">
+                    
+                    <p class="doublejump__text" id="doublejump__start__text">
+                        I built this double jump system as an extension of Unreal's character movement, 
+                        aiming to make it feel responsive and flexible while working seamlessly with other movement features 
+                        like wall-running, dashing, and ledge climbing.
+                    </p>
+
+                    <div class="doublejump__logic__container">
+                        
+                        <div class="doublejump__jump__container">
+                            <p class="doublejump__text">
+                                The logic is pretty straightforward, the character keeps track of whether it's grounded and if a midair jump is still available. 
+                                On a jump input, it checks those states and decides whether to perform a regular jump or launch the player midair for a second jump.
+                            </p>
+    
+                            <div class="doublejump__img__container">
+                                <img class="doublejump__jump" src="DoubleJump_1.png" width="100%" height="100%">
+                            </div>
+                        </div>
+
+                        <div class="doublejump__land__container">
+                            <p class="doublejump__text">
+                                When the player lands, the states reset automatically, re-enabling dashing and grounded movement.
+                            </p>
+    
+                            <div class="doublejump__img__container">
+                                <img class="doublejump__land" src="DoubleJump_2.png" width="100%" height="100%">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="doublejump__textvid__container">
+
+                        <p class="doublejump__text">
+                            I kept the system simple and modular so it can easily tie into other abilities. 
+                            For example, jumping off a wall-run re-enables the double jump and dash, letting the player chain moves together smoothly. 
+                            It's a small feature, but it adds a ton of freedom and flow to the overall movement system.
+                        </p>
+
+                        <div class="doublejump__vid__container">
+                            <video class="doublejump__demonstration__vid" width="100%" height="100%" controls autoplay muted loop> 
+                                <source src="Report_Video_DoubleJump.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="dash" id="dash">
+        <div class="dash__container">
+
+            <div class="dash__header">
+                <h1 class="dash__header__text">Dashing</h1>
+            </div>
+            
+            <div class="dash__content__container">
+                <div class="dash__content">
+                    
+                    <p class="dash__text" id="dash__start__text">
+                        The dash system is built to feel quick, responsive, and readable. 
+                        It gives the player a burst of speed in their movement direction while keeping full control over how it connects to other abilities like wall-running or sliding.
+                    </p>
+
+                    <div class="dash__logic__container">
+                        
+                        <div class="dash__start__container">
+                            <p class="dash__text">
+                                When the dash input is triggered, the character checks a few key conditions before dashing: 
+                                it can't dash while already dashing, wall-running, crouching, or if the dash is still on cooldown. 
+                                Once cleared, it determines the dash direction — either from the player's current movement input or their velocity if they're already in motion.
+                                The dash uses manual interpolation instead of physics forces, which gives smoother, more predictable control over timing, distance, and FOV effects.
+                            </p>
+
+                            <div class="dash__img__container">
+                                <img class="dash__jump" src="Dash_Start.png" width="100%" height="100%">
+                            </div>
+                        </div>
+
+                        <div class="dash__tick__container">
+                            <p class="dash__text">
+                                While dashing, the character's position is linearly interpolated between the start and end points each frame in <span>Tick()</span>, creating a smooth motion independent of physics.
+                            </p>
+    
+                            <div class="dash__img__container">
+                                <img class="dash__land" src="Dash_Tick.png" width="100%" height="100%">
+                            </div>
+                        </div>
+
+                        <div class="dash__stop__container">
+                            <p class="dash__text">
+                                When the dash ends, gravity and normal movement resume immediately.
+                            </p>
+    
+                            <div class="dash__img__container">
+                                <img class="dash__land" src="Dash_Stop.png" width="100%" height="100%">
+                            </div>
+                        </div>
+
+                        <div class="dash__reset__container">
+                            <p class="dash__text">
+                                The dash cooldown resets only when grounded, preventing players from endlessly chaining dashes in midair.
+                            </p>
+    
+                            <div class="dash__img__container">
+                                <img class="dash__land" src="Dash_Reset.png" width="100%" height="100%">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dash__textvid__container">
+
+                        <p class="dash__text">
+                            Overall, this system focuses on player control and flow. 
+                            It's intentionally lightweight and blends seamlessly into other abilities. You can dash out of a wall-run, 
+                            double jump during a dash, or slide right after landing, and it all feels fluid and connected.
+                        </p>
+
+                        <div class="dash__vid__container">
+                            <video class="dash__demonstration__vid" width="100%" height="100%" controls autoplay muted loop> 
+                                <source src="Report_Video_Dash.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="wall_run" id="wall_run">
+        <div class="wall_run__container">
+
+            <div class="dash__header">
+                <h1 class="dash__header__text">Wall Run</h1>
+            </div>
+
+            <div class="wall_run__content__container">
+                <div class="wall_run__content">
+                    <p class="wall_run__text" id="wall_run__start__text">
+                        The wall-run system lets the player run along vertical surfaces while maintaining smooth control over momentum, 
+                        gravity, and camera tilt. I built it to feel fluid and natural, something you can easily transition into from a jump, 
+                        then out of into a dash or double jump, without losing movement flow.
+                    </p>
+
+                    <div class="wall_run__logic__container">
+                        
+                        <div class="wall_run__update__container">
+                            <p class="wall_run__text">
+                                The system constantly checks for valid walls around the player using line traces to the left and right. 
+                                If a wall is detected within range and its normal isn't too steep or flat, the player "sticks" to it and starts wall-running in the appropriate direction.
+                            </p>
+
+                            <div class="wall_run__img__container">
+                                <img class="wall_run__jump" src="WallRun_Update.png" width="100%" height="100%">
+                            </div>
+                        </div>
+
+                        <div class="wall_run__checkforwall__container">
+                            <p class="wall_run__text">
+                                <span>CheckForWall()</span> handles all the detection logic. It performs a series of traces to both sides of the player to determine if there's a suitable wall for running. 
+                                If it finds one, it sets the wall's normal, determines the run direction (left or right), and triggers the stick-to-wall logic.
+                            </p>
+
+                            <div class="wall_run__img__container">
+                                <img class="wall_run__jump" src="WallRun_CheckForWall1.png" width="100%" height="100%">
+                            </div>
+                            <div class="wall_run__img__container">
+                                <img class="wall_run__jump" src="WallRun_CheckForWall2.png" width="100%" height="100%">
+                            </div>
+                        </div>
+
+                        <div class="wall_run__sticktowall__container">
+                            <p class="wall_run__text">
+                                Once a valid wall is found, the player is both pushed toward the surface and launched along it using <span>LaunchCharacter()</span>. 
+                                This keeps the player glued to the wall while allowing them to move horizontally.
+                            </p>
+
+                            <div class="wall_run__img__container">
+                                <img class="wall_run__jump" src="WallRun_PlayerStickToWall.png" width="100%" height="100%">
+                            </div>
+                        </div>
+
+                        <div class="wall_run__cameratilt__container">
+                            <p class="wall_run__text">
+                                While running, the camera tilts dynamically depending on which side of the wall the player is on, 
+                                giving a strong sense of motion and spatial awareness.
+                            </p>
+
+                            <div class="wall_run__img__container">
+                                <img class="wall_run__jump" src="WallRun_CameraTilt.png" width="100%" height="100%">
+                            </div>
+                        </div>
+
+                        <div class="wall_run__stopwallrun__container">
+                            <p class="wall_run__text">
+                                If the player jumps off or loses the wall, StopWallRun() resets all flags and restores normal gravity.
+                            </p>
+
+                            <div class="wall_run__img__container">
+                                <img class="wall_run__jump" src="WallRun_StopWallRun.png" width="100%" height="100%">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wall_run__textvid__container">
+
+                        <p class="wall_run__text">
+                            The system also has a temporary suppression mechanic, which prevents instantly reattaching to the same wall right after jumping off. 
+                            This keeps the motion clean and prevents jittery transitions. Overall, the wall-run system is designed around freedom and momentum. It connects seamlessly with dashing, 
+                            double jumping, and sliding, allowing the player to chain moves together without breaking flow.
+                        </p>
+
+                        <div class="wall_run__vid__container">
+                            <video class="wall_run__demonstration__vid" width="100%" height="100%" controls autoplay muted loop> 
+                                <source src="Report_Video_WallRun.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="ledge_climb" id="ledge_climb">
+        <div class="ledge_climb__container">
+
+            <div class="ledge_climb__header">
+                <h1 class="ledge_climb__header__text">Ledge Climb</h1>
+            </div>
+
+            <div class="ledge_climb__content__container">
+                <div class="ledge_climb__content">
+
+                    <p class="ledge_climb__text" id="ledge_climb__start__text">
+                        The ledge climb system lets the player automatically grab and pull up onto a ledge while falling near a climbable surface. 
+                        It's designed to feel smooth and contextual, you don't have to press anything; if you're jumping toward a ledge, the character naturally grabs it and climbs up.
+                    </p>
+
+                    <div class="ledge_climb__logic__container">
+                        
+                        <div class="ledge_climb__findledge__container">
+                            <p class="ledge_climb__text">
+                                The logic is driven by two line traces every frame inside <span>FindLedge()</span>, one low and one high, 
+                                that check if there's a climbable wall in front of the player but no obstacle above it. 
+                                This ensures the character can actually pull up without hitting geometry.
+                            </p>
+
+                            <div class="ledge_climb__img__container">
+                                <img class="ledge_climb__jump" src="LedgeClimb_FindLedge1.png" width="100%" height="100%">
+                            </div>
+
+                            <p class="ledge_climb__text">
+                                If the bottom trace hits (meaning there's a wall directly in front of you) but the top trace doesn't 
+                                (meaning there's open space above it), and you're currently falling, the system triggers a climb.
+                            </p>
+
+                            <div class="ledge_climb__img__container">
+                                <img class="ledge_climb__jump" src="LedgeClimb_FindLedge2.png" width="100%" height="100%">
+                            </div>
+                        </div>
+
+                        <p class="ledge_climb__text">
+                            When the climb starts, the player's velocity is frozen and the movement component is disabled temporarily by switching the state to <span>Eps_Climbing</span>.
+                            The actual climb motion uses <span>UKismetSystemLibrary::MoveComponentTo()</span>, which smoothly interpolates the player's root component up and forward to the top of the ledge. 
+                            This gives a clean animation-like motion without needing a full animation montage.
+                        </p>
+
+                        <div class="ledge_climb__attemptclimb__container">
+                            <p class="ledge_climb__text">
+                                <span>AttemptClimb()</span> simply sets <span>bCanClimb</span> to true so the climb can't retrigger mid-animation.
+                            </p>
+
+                            <div class="ledge_climb__img__container">
+                                <img class="ledge_climb__jump" src="LedgeClimb_AttemptClimb.png" width="100%" height="100%">
+                            </div>
+                        </div>
+
+                        <div class="ledge_climb__switchcase__container">
+                            <p class="ledge_climb__text">
+                                Once the climb finishes (after ClimbTime seconds), 
+                                <span>CheckPlayerState()</span> detects that the climb duration has passed and calls <span>DontClimb()</span>, resetting the flag and returning control to the player.
+                            </p>
+
+                            <div class="ledge_climb__img__container">
+                                <img class="ledge_climb__jump" src="LedgeClimb_SwitchCase.png" width="100%" height="100%">
+                            </div>
+                        </div>
+
+                        <div class="ledge_climb__dontclimb__container">
+                            <p class="ledge_climb__text">
+                                Finally, <span>DontClimb()</span> just re-enables normal movement again.
+                            </p>
+
+                            <div class="ledge_climb__img__container">
+                                <img class="ledge_climb__jump" src="LedgeClimb_DontClimb.png" width="100%" height="100%">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="ledge_climb__textvid__container">
+
+                        <p class="ledge_climb__text">
+                            Overall, this system is designed for consistency and readability, instead of relying on animations or complex IK, it uses pure movement logic with line traces and component motion.
+                            It integrates naturally with the rest of the movement suite, for example, you can jump toward a wall, wall-run briefly, then grab a ledge and pull up, all in one continuous flow.
+                        </p>
+
+                        <div class="ledge_climb__vid__container">
+                            <video class="ledge_climb__demonstration__vid" width="100%" height="100%" controls autoplay muted loop> 
+                                <source src="Report_Video_LedgeClimb.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="crouchslide" id="crouchslide">
+        <div class="crouchslide__container">
+            
+            <div class="crouchslide__header">
+                <h1 class="crouchslide__header__text">Crouch & Sliding</h1>
+            </div>
+
+            <div class="crouchslide__content__container">
+                <div class="crouchslide__content">
+
+                    <p class="crouchslide__text" id="crouchslide__start__text">
+                        The crouch system lets the player switch seamlessly between standing, crouching, and sliding states depending on movement speed and player input. 
+                        It's designed to feel responsive and dynamic, similar to movement systems in fast-paced shooters like Apex Legends.
+                    </p>
+
+                    <div class="crouchslide__logic__container">
+
+                        <div class="crouchslide__begincrouch__container">
+                            <p class="crouchslide__text">
+                                The crouch system is handled through a combination of height interpolation, camera offset, and movement state control.
+                                When the player presses the crouch input, the code checks if they're eligible to crouch, meaning they aren't already crouching, sliding, wall-running, or dashing. 
+                                If they're moving fast enough forward, the same input triggers a slide instead.
+                            </p>
+
+                            <div class="crouchslide__img__container">
+                                <img class="crouchslide__jump" src="Crouch_BeginCrouch.png" width="100%" height="100%">
+                            </div>
+
+                        </div>
+
+                        <div class="crouchslide__endcrouch__container">
+                            <p class="crouchslide__text">
+                                When the player releases the crouch key, <span>EndCrouch()</span> resets the crouch state, but only if the player can stand (i.e., there's no obstacle above their head). 
+                                The system uses a vertical line trace to check this before transitioning back to standing.
+                            </p>
+
+                            <div class="crouchslide__img__container">
+                                <img class="crouchslide__jump" src="Crouch_EndCrouch.png" width="100%" height="100%">
+                            </div>
+
+                        </div>
+
+                        <div class="crouchslide__canstand__container">
+                            <p class="crouchslide__text">
+                                The <span>CanStand()</span> function performs that vertical trace from the character's capsule upwards to ensure there's enough room.
+                            </p>
+
+                            <div class="crouchslide__img__container">
+                                <img class="crouchslide__jump" src="Crouch_CanStand.png" width="100%" height="100%">
+                            </div>
+
+                        </div>
+
+                        <div class="crouchslide__crouchheightchange__container">
+                            <p class="crouchslide__text">
+                                The visual and physical height transitions happen through the <span>CrouchHeightChange()</span> function, 
+                                which smoothly interpolates both the camera height and capsule collider height toward their crouched or standing values. 
+                                This keeps the motion grounded and realistic instead of snapping between poses.
+                            </p>
+
+                            <div class="crouchslide__img__container">
+                                <img class="crouchslide__jump" src="Crouch_CrouchHeightChange.png" width="100%" height="100%">
+                            </div>
+
+                        </div>
+
+                        <div class="crouchslide__startsliding__container">
+                            <p class="crouchslide__text">
+                                If the player is sprinting and crouches, the system triggers a slide instead.
+                                <span>StartSliding()</span> launches the player forward, lowers friction, and widens the camera FOV to emphasize speed.
+                            </p>
+
+                            <div class="crouchslide__img__container">
+                                <img class="crouchslide__jump" src="Sliding_StartSliding.png" width="100%" height="100%">
+                            </div>
+
+                        </div>
+
+                        <div class="crouchslide__stopsliding__container">
+                            <p class="crouchslide__text">
+                                When the slide ends, friction and FOV are reset.
+                            </p>
+
+                            <div class="crouchslide__img__container">
+                                <img class="crouchslide__jump" src="Sliding_StopSliding.png" width="100%" height="100%">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="crouchslide__textvid__container">
+
+                        <p class="crouchslide__text">
+                            In short, the crouch system isn't just a toggle. 
+                            It's a layered movement state that connects with the rest of the character's abilities. 
+                            You can sprint into a slide, jump mid-slide into a wall-run, or cancel a crouch into a dash, all without breaking the flow or camera continuity.
+                        </p>
+
+                        <div class="crouchslide__vid__container">
+                            <video class="crouchslide__demonstration__vid" width="100%" height="100%" controls autoplay muted loop> 
+                                <source src="Report_Video_Crouch.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                        <div class="crouchslide__vid__container">
+                            <video class="crouchslide__demonstration__vid" width="100%" height="100%" controls autoplay muted loop> 
+                                <source src="Report_Video_Sliding.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="footer__container">
+        <section class="media">
+            <div class="media--wrap">
+                <div class="footer__info">
+                    <div class="footer__text__links">
+                        <a href="https://www.hampushagenborn.com/" id="footer__logo">Hampus Hagenborn</a>
+                        <a href="mailto: hampus0405@gmail.com" class="footer__mail">hampus0405@gmail.com</a>
+                        <a href="tel:+460708771442" class="footer__phone__number">+46708771442</a>
+                    </div>
+
+                    <div class="footer__image__links">
+                        <a href="https://www.linkedin.com/in/hampus-hagenborn-b2131426b/">
+                            <img class="footer__linkedin__link">
+                        </a>
+
+                        <a href="https://github.com/ItsPinkuuu">
+                            <img class="footer__github__link">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="copyright__container">
+                    <p class="website__rights">Copyright &#169; <script>document.write(new Date().getFullYear())</script>, Hampus Hagenborn</p>
+                </div>
+                
+            </div>
+        </section>
+    </div>
+
+    <script src="movementsystem.js"></script>
+</body>
+</html>

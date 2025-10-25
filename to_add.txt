@@ -1,10 +1,20 @@
->> Add more color to website - In Progress
-
 >> Add project pages:
- - Movement System
- - Meadgard
+    - Movement System
+    - Meadgard
+
+>> On Hold:
+    - Add more color to website
 
 >> Potential removal:
- - Amplifish
- - Project Elf
- - Mood 666
+    - Amplifish Page
+    - Project Elf Page
+    - Mood 666 Page
+
+
+>> TO-DO:
+    - Movement System Page
+    - Meadgard Page
+    Re-design home page
+
+>> In Progress:
+    - Movement System Page
