@@ -1,5 +1,4 @@
 >> Add project pages:
-    - Movement System
     - Meadgard
 
 >> On Hold:
@@ -12,9 +11,7 @@
 
 
 >> TO-DO:
-    - Movement System Page
     - Meadgard Page
-    Re-design home page
+    - Re-design home page
 
 >> In Progress:
-    - Movement System Page
