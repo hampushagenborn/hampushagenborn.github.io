@@ -13,5 +13,6 @@
 >> TO-DO:
     - Meadgard Page
     - Re-design home page
+    - Move linkedin and github icons to navbar
 
 >> In Progress:
