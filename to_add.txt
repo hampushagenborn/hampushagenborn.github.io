@@ -14,5 +14,6 @@
     - Meadgard Page
     - Re-design home page
     - Move linkedin and github icons to navbar
+    - Make Game Projects only be cards, they wont have their own page. 
 
 >> In Progress:
