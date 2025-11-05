@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    /* font-family: "Kumbh Sans", sans-serif; */
     font-family: Hack, monospace;
     scroll-behavior: smooth;
 }
@@ -196,6 +197,143 @@
     /* background-color: purple; */
 }
 
+.card {
+    display: grid;
+    grid-template-rows: .5fr 1.2fr;
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 5%;
+    /* padding-right: 40px; */
+    background-color: #222222;
+}
+
+.card__video {
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+}
+
+.card__text__container {
+    /* background-color: #2b5541; */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 0 10px;
+}
+
+.card__header__text {
+    font-family: "Nanum Brush Script", cursive;
+    font-size: 35px;
+    color: #fff;
+}
+
+.card__description {
+    font-size: 18px;
+    color: #fff;
+    text-align: left;
+}
+
+.card__description span {
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #ffc2d1;
+}
+
+@media screen and (max-width: 1200px) {
+    .card {
+        display: grid;
+        grid-template-rows: .5fr 1.2fr;
+        width: 400px;
+        margin: 0 auto;
+        text-align: left;
+        border-radius: 5%;
+        /* padding-right: 40px; */
+        background-color: #222222;
+    }
+
+    .card__video {
+        width: 100%;
+        height: 100%;
+        border-radius: 5%;
+    }
+
+    .card__text__container {
+        /* background-color: #2b5541; */
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        padding: 0 10px;
+    }
+
+    .card__header__text {
+        font-family: "Nanum Brush Script", cursive;
+        font-size: 35px;
+        color: #fff;
+    }
+
+    .card__description {
+        font-size: 18px;
+        color: #fff;
+        text-align: left;
+    }
+
+}
+
+@media screen and (max-width: 960px) {
+    .card {
+        display: grid;
+        grid-template-rows: .5fr 1.2fr;
+        width: 400px;
+        margin: 0 auto;
+        text-align: center;
+        border-radius: 5%;
+        /* padding-right: 40px; */
+        background-color: #222222;
+    }
+
+    .card__video {
+        width: 100%;
+        height: 100%;
+        border-radius: 5%;
+    }
+
+    .card__text__container {
+        /* background-color: #2b5541; */
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        padding: 0 10px;
+    }
+
+    .card__header__text {
+        font-family: "Nanum Brush Script", cursive;
+        font-size: 35px;
+        color: #fff;
+    }
+
+    .card__description {
+        font-size: 18px;
+        color: #fff;
+        text-align: left;
+    }
+
+    .card__description span {
+        padding-left: 5px;
+        padding-right: 5px;
+        color: #ffc2d1;
+    }
+}
+
 .read__more {
     font-size: 18px;
     width: 150px;
@@ -223,428 +361,7 @@
     transform: translateY(4px);
 }
 
-
-
-/* ----------------------------------------------- */
-/* RECENT PROJECTS TAB */
-/* ----------------------------------------------- */
-
-.recent__header__text {
-    background-color: #b94366;
-    font-family: "Nanum Brush Script", cursive;
-    font-size: 60px;
-    color: #fff;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 30px;
-    text-align: left;
-    border-radius: 10px;
-}
-
-.recent__content {
-    display: grid;
-    grid-template-rows: repeat(4, 1fr);
-    grid-row-gap: 20px;
-    max-width: 1500px;
-    margin: auto auto;
-    height: 90%;
-    text-align: left;
-    /* background-color: #233223; */
-}
-
-
-
-/* ----------------------------------------------- */
-/* INVENTORY SYSTEM ITEM */
-/* ----------------------------------------------- */
-
-.inventorySystem__container {
-    display: grid;
-    grid-template-columns: 2fr 2fr;
-    max-width: 1500px;
-    margin: 0 10%;
-    text-align: left;
-    padding-left: 40px;
-    border-radius: 1%;
-    background-color: #222222;
-}
-
-.inventorySystem__text__container {
-    /* background-color: #2b5541; */
-    display: grid;
-    grid-template-rows: .1fr .5fr .1fr;
-}
-
-.inventorySystem__header__text {
-    font-family: "Nanum Brush Script", cursive;
-    font-size: 50px;
-    color: #fff;
-    padding-top: 50px;
-    padding-bottom: 20px;
-}
-
-.inventorySystem__description {
-    font-size: 18px;
-    padding-top: 20px;
-    padding-right: 20px;
-    color: #fff;
-    text-align: left;
-}
-
-.inventorySystem__description span {
-    padding-left: 5px;
-    padding-right: 5px;
-    color: #ffc2d1;
-}
-
-.inventorySystem__img__container {
-    overflow: hidden;
-}
-
-.inventorySystem__image {
-    height: 100%;
-    width: 100%;
-    max-width: 380px;
-    object-fit: contain;
-    transition: transform .8s;
-    border-radius: 1.5%;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -o-user-select: none;
-    user-select: none;
-}
-
-.inventorySystem__image:hover {
-    transform: scale(1.05);
-}
-
-
-
-/* ----------------------------------------------- */
-/* MOVEMENT SYSTEM ITEM */
-/* ----------------------------------------------- */
-
-.movementsystem__container {
-    display: grid;
-    grid-template-columns: 2fr 2fr;
-    max-width: 1500px;
-    margin: 0 10%;
-    text-align: left;
-    padding-left: 40px;
-    border-radius: 1%;
-    background-color: #222222;
-}
-
-.movementsystem__text__container {
-    /* background-color: #2b5541; */
-    display: grid;
-    grid-template-rows: .1fr .5fr .1fr;
-}
-
-.movementsystem__header__text {
-    font-family: "Nanum Brush Script", cursive;
-    font-size: 50px;
-    color: #fff;
-    padding-top: 50px;
-    padding-bottom: 20px;
-}
-
-.movementsystem__description {
-    font-size: 18px;
-    padding-top: 20px;
-    padding-right: 20px;
-    color: #fff;
-    text-align: left;
-}
-
-.movementsystem__description span {
-    padding-left: 5px;
-    padding-right: 5px;
-    color: #ffc2d1;
-}
-
-.movementsystem__img__container {
-    overflow: hidden;
-}
-
-.movementsystem__image {
-    height: 100%;
-    width: 100%;
-    max-width: 600px;
-    object-fit: contain;
-    transition: transform .8s;
-    border-radius: 1.5%;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -o-user-select: none;
-    user-select: none;
-}
-
-.movementsystem__image:hover {
-    transform: scale(1.05);
-}
-
-
-
-/* ----------------------------------------------- */
-/* MOOD 666 ITEM */
-/* ----------------------------------------------- */
-
-.Mood__container {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    max-width: 1500px;
-    margin: 0 auto;
-    text-align: left;
-    padding-left: 40px;
-    border-radius: 1%;
-    background-color: #222222;
-}
-
-.Mood__text__container {
-    /* background-color: #2b5541; */
-    display: grid;
-    grid-template-rows: .1fr .5fr .1fr;
-}
-
-.Mood__header__text {
-    font-family: "Nanum Brush Script", cursive;
-    font-size: 50px;
-    color: #fff;
-    padding-top: 50px;
-    padding-bottom: 20px;
-}
-
-.Mood__description__list {
-    list-style-position: inside;
-}
-
-.Mood__description {
-    font-size: 18px;
-    padding-top: 20px;
-    padding-right: 20px;
-    color: #fff;
-    text-align: left;
-}
-
-.Mood__img__container {
-    overflow: hidden;
-}
-
-.Mood__image {
-    height: 100%;
-    width: 100%;
-    max-width: 380px;
-    object-fit: contain;
-    transition: transform .8s;
-    border-radius: 1.5%;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -o-user-select: none;
-    user-select: none;
-}
-
-.Mood__image:hover {
-    transform: scale(1.05);
-}
-
-
-
-/* ----------------------------------------------- */
-/* PROJECT E.L.F ITEM */
-/* ----------------------------------------------- */
-
-.GP3__container {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    max-width: 1500px;
-    margin: 0 auto;
-    text-align: left;
-    padding-left: 40px;
-    border-radius: 1%;
-    background-color: #222222;
-}
-
-.GP3__text__container {
-    /* background-color: #2b5541; */
-    display: grid;
-    grid-template-rows: .1fr .5fr .1fr;
-}
-
-.GP3__header__text {
-    font-family: "Nanum Brush Script", cursive;
-    font-size: 50px;
-    color: #fff;
-    padding-top: 50px;
-    padding-bottom: 20px;
-}
-
-.GP3__description__list {
-    list-style-position: inside;
-}
-
-.GP3__description {
-    font-size: 18px;
-    padding-top: 20px;
-    padding-right: 20px;
-    color: #fff;
-    text-align: left;
-}
-
-.GP3__img__container {
-    overflow: hidden;
-}
-
-.GP3__image {
-    height: 100%;
-    width: 100%;
-    max-width: 380px;
-    object-fit: contain;
-    transition: transform .8s;
-    border-radius: 1.5%;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -o-user-select: none;
-    user-select: none;
-}
-
-.GP3__image:hover {
-    transform: scale(1.05);
-}
-
-
-
-/* ----------------------------------------------- */
-/* AMPLIFISH ITEM */
-/* ----------------------------------------------- */
-
-.GP1__container {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    max-width: 1500px;
-    margin: 0 auto;
-    text-align: left;
-    padding-left: 40px;
-    border-radius: 1%;
-    background-color: #222222;
-}
-
-.GP1__text__container {
-    /* background-color: #2b5541; */
-    display: grid;
-    grid-template-rows: .1fr .5fr .1fr;
-}
-
-.GP1__header__text {
-    font-family: "Nanum Brush Script", cursive;
-    font-size: 50px;
-    color: #fff;
-    padding-top: 50px;
-    padding-bottom: 20px;
-}
-
-.GP1__description__list {
-    list-style-position: inside;
-}
-
-.GP1__description {
-    font-size: 18px;
-    padding-top: 20px;
-    padding-right: 20px;
-    color: #fff;
-    text-align: left;
-}
-
-.GP1__img__container {
-    overflow: hidden;
-}
-
-.GP1__image {
-    height: 100%;
-    width: 100%;
-    max-width: 380px;
-    object-fit: contain;
-    transition: transform .8s;
-    border-radius: 1.5%;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -o-user-select: none;
-    user-select: none;
-}
-
-.GP1__image:hover {
-    transform: scale(1.05);
-}
-
-
-
-
-
-
-
 @media screen and (max-width: 960px) {
-
-    .projects {
-        background: #000000;
-        background: linear-gradient(to right, #161616, #000000);
-        padding-bottom: 10rem;
-    }
-
-    .projects__container {
-        display: grid;
-        grid-template-columns: 1fr;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        margin: 0 auto;
-        height: 90%;
-    }
-
-    .recent__header__text {
-        font-size: 45px;
-    }
-
-    .recent__content {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        max-width: 1500px;
-        margin: 0 auto;
-        height: 90%;
-        text-align: left;
-        /* padding-left: 10px; */
-        /* background-color: #233223; */
-    }
-    
-    .recent__content__row1 {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-row-gap: 20px;
-        max-width: 1500px;
-        margin: 0 6%;
-        height: 90%;
-        text-align: left;
-        /* background-color: #233223; */
-    }
-    
-    .recent__content__row2 {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-row-gap: 20px;
-        max-width: 1500px;
-        margin: 0 6%;
-        height: 90%;
-        text-align: left;
-        /* background-color: #233223; */
-    }
-    
     .read__more {
         font-size: 18px;
         width: 150px;
@@ -671,345 +388,301 @@
         box-shadow: 0 5px #451926;
         transform: translateY(4px);
     }
+}
+
+
+
+.image__card {
+    display: grid;
+    grid-template-rows: 1.5fr 1.2fr;
+    width: 400px;
+    height: 565px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 5%;
+    /* padding-right: 40px; */
+    /* background-color: #222222; */
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.image__card__media {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.image__card__text__container {
+    /* background-color: #2b5541; */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 0 10px;
+    border-radius: 5%;
+    background: linear-gradient(0deg,
+    rgba(0, 0, 0, 1) 0%, 
+    rgba(0, 0, 0, 1) 25%, 
+    rgba(0, 0, 0, 0.8) 75%, 
+    rgba(0, 0, 0, 0) 100%);
+}
+
+.image__card__header__text {
+    font-family: "Nanum Brush Script", cursive;
+    font-size: 35px;
+    color: #fff;
+}
+
+.image__card__description__list {
+    list-style-position: inside;
+}
+
+.image__card__description {
+    font-size: 18px;
+    color: #fff;
+    text-align: left;
+}
+
+.image__card__description span {
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #ffc2d1;
+}
+
+@media screen and (max-width: 1200px) {
+    .image__card {
+        display: grid;
+        grid-template-rows: 1.5fr 1.2fr;
+        width: 400px;
+        height: 565px;
+        margin: 0 auto;
+        text-align: center;
+        border-radius: 5%;
+        /* padding-right: 40px; */
+        /* background-color: #222222; */
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .image__card__text__container {
+        /* background-color: #2b5541; */
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        padding: 0 10px;
+        border-radius: 5%;
+        background: linear-gradient(0deg,
+        rgba(0, 0, 0, 1) 0%, 
+        rgba(0, 0, 0, 1) 25%, 
+        rgba(0, 0, 0, 0.8) 75%, 
+        rgba(0, 0, 0, 0) 100%);
+    }
+
+    .image__card__header__text {
+        font-family: "Nanum Brush Script", cursive;
+        font-size: 35px;
+        color: #fff;
+    }
+
+    .image__card__description__list {
+        list-style-position: inside;
+    }
+
+    .image__card__description {
+        font-size: 18px;
+        color: #fff;
+        text-align: left;
+    }
+
+}
+
+@media screen and (max-width: 960px) {
+    .image__card {
+        display: grid;
+        grid-template-rows: 1.5fr 1.2fr;
+        width: 400px;
+        height: 565px;
+        margin: 0 auto;
+        text-align: center;
+        border-radius: 5%;
+        /* padding-right: 40px; */
+        /* background-color: #222222; */
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .image__card__text__container {
+        /* background-color: #2b5541; */
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        padding: 0 10px;
+        border-radius: 5%;
+        background: linear-gradient(0deg,
+        rgba(0, 0, 0, 1) 0%, 
+        rgba(0, 0, 0, 1) 25%, 
+        rgba(0, 0, 0, 0.8) 75%, 
+        rgba(0, 0, 0, 0) 100%);
+    }
+
+    .image__card__header__text {
+        font-family: "Nanum Brush Script", cursive;
+        font-size: 35px;
+        color: #fff;
+    }
+
+    .image__card__description__list {
+        list-style-position: inside;
+    }
+
+    .image__card__description {
+        font-size: 18px;
+        color: #fff;
+        text-align: left;
+    }
+
+    .image__card__description span {
+        padding-left: 5px;
+        padding-right: 5px;
+        color: #ffc2d1;
+    }
+}
+
+.itch_read__more {
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10%;
+    background-color: #d04c73;
+}
+
+#itch-icon {
+    height: 100%;
+    width: 100%;
+}
+
+@media screen and (max-width: 960px) {
+    .itch_read__more {
+        width: 150px;
+        height: 50px;
+        cursor: pointer;
+        border: none;
+        border-radius: 10%;
+        background-color: #d04c73;
+    }
+
+    #itch-icon {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+
+
+/* ----------------------------------------------- */
+/* RECENT PROJECTS TAB */
+/* ----------------------------------------------- */
+
+.recent_projects {
+    background: #000000;
+    background: linear-gradient(to right, #161616, #000000);
+    padding-bottom: 10rem;
+}
+
+.recent_projects__container {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-row-gap: 20px;
+    max-width: 1500px;
+    margin: 0 auto;
+    height: 90%;
+    text-align: left;
+    /* padding-left: 10px; */
+    /* background-color: #233223; */
+}
+
+.recent_projects__header {
+    padding: 0 100px;
+}
+
+.recent_projects__header__text {
+    background-color: #b94366;
+    font-family: "Nanum Brush Script", cursive;
+    font-size: 60px;
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    text-align: left;
+    border-radius: 10px;
+}
+
+.recent_projects__content {
+    /* background-color: #233223; */
+    max-width: 1500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 0px;
+    grid-template-rows: repeat(1, 1fr);
+    grid-row-gap: 40px;
+    place-content: center;
+    margin: 0 200px;
+}
+
+@media screen and (max-width: 1200px) {
+    .recent_projects__content {
+        margin: 0 100px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .recent_projects {
+        padding-bottom: 10rem;
+    }
     
+    .recent_projects__container {
+        display: grid;
+        grid-template-rows: 1fr;
+        max-width: 1500px;
+        margin: 0 auto;
+        height: 90%;
+        text-align: left;
+        /* padding-left: 10px; */
+        /* background-color: #233223; */
+    }
+
+    .recent_projects__header {
+        padding: 0 0;
+    }
     
-
-    /* ----------------------------------------------- */
-    /* INVENTORY SYSTEM ITEM */
-    /* ----------------------------------------------- */
-
-    .inventorySystem__container {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: .5fr .5fr;
-        max-width: 1500px;
-        margin: 0 1%;
-        text-align: left;
-        padding-left: 40px;
-        padding-right: 40px;
-        border-radius: 1%;
-        background-color: #222222;
-    }
-
-    .inventorySystem__text__container {
-        /* background-color: #2b5541; */
-        display: grid;
-        grid-template-rows: .1fr .5fr .1fr;
-    }
-
-    .inventorySystem__header__text {
-        font-family: "Nanum Brush Script", cursive;
+    .recent_projects__header__text {
         font-size: 35px;
         color: #fff;
-        padding-top: 50px;
-        padding-bottom: 20px;
-    }
-
-    .inventorySystem__description__list {
-        list-style-position: inside;
-        padding-bottom: 20px;
-    }
-
-    .inventorySystem__description {
-        font-size: 18px;
-        padding-top: 20px;
-        padding-right: 20px;
-        color: #fff;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 30px;
         text-align: left;
     }
 
-    .inventorySystem__img__container {
-        padding-top: 40px;
-        overflow: hidden;
-        align-items: center;
-    }
-
-    .inventorySystem__image {
-        height: auto;
-        width: 300px;
-        transition: transform .8s;
-        border-radius: 1.5%;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -o-user-select: none;
-        user-select: none;
-    }
-
-    .inventorySystem__image:hover {
-        transform: scale(1.05);
-    }
-
-
-
-    /* ----------------------------------------------- */
-    /* MOVEMENT SYSTEM ITEM */
-    /* ----------------------------------------------- */
-
-    .movementsystem__container {
+    .recent_projects__content {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: .5fr .5fr;
+        grid-template-rows: repeat(auto-fill, 1fr);
+        grid-column-gap: 20px;
         max-width: 1500px;
-        margin: 0 1%;
-        text-align: left;
-        padding-left: 40px;
-        padding-right: 40px;
-        border-radius: 1%;
-        background-color: #222222;
-    }
-
-    .movementsystem__text__container {
-        /* background-color: #2b5541; */
-        display: grid;
-        grid-template-rows: .1fr .5fr .1fr;
-    }
-
-    .movementsystem__header__text {
-        font-family: "Nanum Brush Script", cursive;
-        font-size: 35px;
-        color: #fff;
-        padding-top: 50px;
-        padding-bottom: 20px;
-    }
-
-    .movementsystem__description__list {
-        list-style-position: inside;
-        padding-bottom: 20px;
-    }
-
-    .movementsystem__description {
-        font-size: 18px;
-        padding-top: 20px;
-        padding-right: 20px;
-        color: #fff;
-        text-align: left;
-    }
-
-    .movementsystem__img__container {
-        padding-top: 40px;
-        overflow: hidden;
-        align-items: center;
-    }
-
-    .movementsystem__image {
-        height: auto;
-        width: 300px;
-        transition: transform .8s;
-        border-radius: 1.5%;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -o-user-select: none;
-        user-select: none;
-    }
-
-    .movementsystem__image:hover {
-        transform: scale(1.05);
-    }
-
-
-
-    /* ----------------------------------------------- */
-    /* MOOD 666 ITEM */
-    /* ----------------------------------------------- */
-
-    .Mood__container {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: .7fr 1fr;
-        max-width: 1500px;
-        margin: 0 auto;
-        text-align: left;
-        padding-left: 40px;
-        padding-right: 40px;
-        border-radius: 1%;
-        background-color: #222222;
-    }
-
-    .Mood__text__container {
-        /* background-color: #2b5541; */
-        display: grid;
-        grid-template-rows: .1fr .5fr .1fr;
-    }
-
-    .Mood__header__text {
-        font-family: "Nanum Brush Script", cursive;
-        font-size: 35px;
-        color: #fff;
-        padding-top: 50px;
-        padding-bottom: 20px;
-    }
-
-    .Mood__description__list {
-        list-style-position: inside;
-        padding-bottom: 20px;
-    }
-
-    .Mood__description {
-        font-size: 18px;
-        padding-top: 20px;
-        padding-right: 20px;
-        color: #fff;
-        text-align: left;
-    }
-
-    .Mood__img__container {
-        padding-top: 40px;
-        overflow: hidden;
-        align-items: center;
-    }
-
-    .Mood__image {
-        height: auto;
-        width: 300px;
-        transition: transform .8s;
-        border-radius: 1.5%;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -o-user-select: none;
-        user-select: none;
-    }
-
-    .Mood__image:hover {
-        transform: scale(1.05);
-    }
-
-
-
-    /* ----------------------------------------------- */
-    /* PROJECT E.L.F ITEM */
-    /* ----------------------------------------------- */
-
-    .GP3__container {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: .7fr 1fr;
-        max-width: 1500px;
-        margin: 0 auto;
-        text-align: left;
-        padding-left: 40px;
-        padding-right: 40px;
-        border-radius: 1%;
-        background-color: #222222;
-    }
-
-    .GP3__text__container {
-        /* background-color: #2b5541; */
-        display: grid;
-        grid-template-rows: .1fr .5fr .1fr;
-    }
-
-    .GP3__header__text {
-        font-family: "Nanum Brush Script", cursive;
-        font-size: 35px;
-        color: #fff;
-        padding-top: 50px;
-        padding-bottom: 20px;
-    }
-
-    .GP3__description__list {
-        list-style-position: inside;
-        padding-bottom: 20px;
-    }
-
-    .GP3__description {
-        font-size: 18px;
-        padding-top: 20px;
-        padding-right: 20px;
-        color: #fff;
-        text-align: left;
-    }
-
-    .GP3__img__container {
-        padding-top: 40px;
-        overflow: hidden;
-        align-items: center;
-    }
-
-    .GP3__image {
-        height: auto;
-        width: 300px;
-        transition: transform .8s;
-        border-radius: 1.5%;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -o-user-select: none;
-        user-select: none;
-    }
-
-    .GP3__image:hover {
-        transform: scale(1.05);
-    }
-
-
-
-    /* ----------------------------------------------- */
-    /* AMPLIFISH ITEM */
-    /* ----------------------------------------------- */
-
-    .GP1__container {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: .7fr 1fr;
-        max-width: 1500px;
-        margin: 0 auto;
-        text-align: left;
-        padding-left: 40px;
-        padding-right: 40px;
-        border-radius: 1%;
-        background-color: #222222;
-    }
-
-    .GP1__text__container {
-        /* background-color: #2b5541; */
-        display: grid;
-        grid-template-rows: .1fr .5fr .1fr;
-    }
-
-    .GP1__header__text {
-        font-family: "Nanum Brush Script", cursive;
-        font-size: 35px;
-        color: #fff;
-        padding-top: 50px;
-        padding-bottom: 20px;
-    }
-
-    .GP1__description__list {
-        list-style-position: inside;
-        padding-bottom: 20px;
-    }
-
-    .GP1__description {
-        font-size: 18px;
-        padding-top: 20px;
-        padding-right: 20px;
-        color: #fff;
-        text-align: left;
-    }
-
-    .GP1__img__container {
-        padding-top: 40px;
-        overflow: hidden;
-        align-items: center;
-    }
-
-    .GP1__image {
-        height: auto;
-        width: 300px;
-        transition: transform .8s;
-        border-radius: 1.5%;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -o-user-select: none;
-        user-select: none;
-    }
-
-    .GP1__image:hover {
-        transform: scale(1.05);
+        margin: 0 0%;
+        padding: 0px 10%;
+        height: 100%;
+        text-align: center;
     }
 }
 
