@@ -5,6 +5,7 @@
     /* font-family: "Kumbh Sans", sans-serif; */
     font-family: Hack, monospace;
     scroll-behavior: smooth;
+    scrollbar-color: #b94366 #000000;
 }
 
 *::selection {
@@ -566,9 +567,24 @@
 }
 
 #itch-icon {
+    content: url(../General/itch_logo.png);
     height: 100%;
     width: 100%;
+    cursor: pointer;
+    border-radius: 10%;
+    box-shadow: 0 9px #742a40;
+    transition: 0.1s;
 }
+
+#itch-icon:hover {
+    content: url(../General/itch_logo_hover.png);
+}
+
+#itch-icon:active {
+    box-shadow: 0 5px #451926;
+    transform: translateY(4px);
+}
+
 
 @media screen and (max-width: 960px) {
     .itch_read__more {
@@ -581,8 +597,22 @@
     }
 
     #itch-icon {
+        content: url(../General/itch_logo.png);
         height: 100%;
         width: 100%;
+        cursor: pointer;
+        border-radius: 10%;
+        box-shadow: 0 9px #742a40;
+        transition: 0.1s;
+    }
+
+    #itch-icon:hover {
+        content: url(../General/itch_logo_hover.png);
+    }
+
+    #itch-icon:active {
+        box-shadow: 0 5px #451926;
+        transform: translateY(4px);
     }
 }
 
