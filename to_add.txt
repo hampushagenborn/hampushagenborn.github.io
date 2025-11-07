@@ -15,5 +15,20 @@
     - Re-design home page
     - Move linkedin and github icons to navbar
     - Make Game Projects only be cards, they wont have their own page. 
+    - Change title text font
 
 >> In Progress:
+
+
+NOTES: 
+Move experience up to Main start area
+Move linkedin and git to header
+Add linkedin recommendations
+
+
+Be a bit more personal and fun in your mail
+
+
+WHAT THEY LOOK AT:
+Linkedin - what have they worked with, people in their contacts, linkedin references, 
+what kind of person are they,

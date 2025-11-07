@@ -4,6 +4,7 @@
     padding: 0;
     font-family: Hack, monospace;
     scroll-behavior: smooth;
+    scrollbar-color: #b94366 #000000;
 }
 
 *::selection {
