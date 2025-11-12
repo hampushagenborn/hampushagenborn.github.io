@@ -12,17 +12,13 @@
 
 >> TO-DO:
     - Meadgard Page
-    - Re-design home page
-    - Move linkedin and github icons to navbar
-    - Make Game Projects only be cards, they wont have their own page. 
     - Change title text font
 
 >> In Progress:
+    - Re-design home page
 
 
 NOTES: 
-Move experience up to Main start area
-Move linkedin and git to header
 Add linkedin recommendations
 
 
