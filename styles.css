@@ -468,13 +468,7 @@
     grid-template-rows: repeat(1, 1fr);
     grid-row-gap: 40px;
     place-content: center;
-    margin: 0 200px;
-}
-
-@media screen and (max-width: 1200px) {
-    .specialisation__content {
-        margin: 0 auto;
-    }
+    margin: 0 auto;
 }
 
 @media screen and (max-width: 960px) {
@@ -986,13 +980,7 @@
     grid-template-rows: repeat(1, 1fr);
     grid-row-gap: 40px;
     place-content: center;
-    margin: 0 200px;
-}
-
-@media screen and (max-width: 1200px) {
-    .recent_projects__content {
-        margin: 0 auto;
-    }
+    margin: 0 auto;
 }
 
 @media screen and (max-width: 960px) {
