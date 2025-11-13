@@ -31,9 +31,9 @@
     height: 100px;
     z-index: 1;
     width: 100%;
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 50px;
+    max-width: 1500px;
+    margin-left: auto;
+    padding-left: 50px;
 }
 
 #navbar__logo {
@@ -48,6 +48,7 @@
 
 .navbar__menu {
     display: flex;
+    justify-content: center;
     align-items: center;
     list-style: none;
 }
@@ -67,11 +68,56 @@
     transition: all 0.3s ease;
 }
 
-
-
 .navbar__links:hover {
     color: #ffc2d1;
     transition: all 0.3s ease;
+}
+
+.navbar__socials {
+    display: flex;
+    margin-right: 50px;
+    margin-bottom: 0px;
+}
+
+#navbar__linkedin__link {
+    width: 80px;
+}
+
+.linkedin__link {
+    content: url(../General/linkedin_logo_white.png);
+    height: auto;
+    width: 40px;
+}
+
+.linkedin__link:hover {
+    content: url(../General/linkedin_logo_hover.png);
+}
+
+#navbar__github__link {
+    width: 80px;
+}
+
+.github__link {
+    content: url(../General/github_logo_white.png);
+    height: auto;
+    width: 40px;
+}
+
+.github__link:hover {
+    content: url(../General/github_logo_hover.png);
+}
+
+#mobile-menu {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    transform: translate(5%, 20%);
+}
+
+@media screen and (max-width: 1105px) {
+    #navbar__logo {
+        font-size: 2rem;
+    }
 }
 
 
@@ -82,7 +128,7 @@
         height: 80px;
         z-index: 1;
         width: 100%;
-        max-width: 1300px;
+        max-width: 1500px;
         padding: 0;
     }
 
@@ -131,6 +177,22 @@
         padding: .1rem;
         width: 100%;
         display: table;
+    }
+
+    .navbar__socials {
+        display: flex;
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+
+    .linkedin__link {
+        height: auto;
+        width: 40px;
+    }
+    
+    .github__link {
+        height: auto;
+        width: 40px;
     }
 
     .navbar__btn {
