@@ -340,13 +340,13 @@
     .main {
         background: #000000;
         background: linear-gradient(to right, #161616, #000000);
-        padding-top: 0px;
+        padding: 0 0 50px 0;
     }
 
     .main__container {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr .9fr;
+        grid-template-rows: 1fr .5fr;
         justify-content: center;
         align-items: center;
         max-width: 1200px;
