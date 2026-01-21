@@ -62,7 +62,7 @@
             <div class="text__link__container">
                 <div class="main__text__container"> 
                     <h1 class="main__heading">Hello There!</h1>
-                    <p class="main__description">My name is Hampus Hagenborn! I am a game programmer and a student at Futuregames in Malmö.</p>
+                    <p class="main__description">My name is Hampus Hagenborn! I am a game programmer and a former student at Futuregames in Malmö.</p>
                     <p class="main__description">Ever since I played my first game when I was 5 years old, I have always wondered how it all worked. This led me down the path of programming and in later years game programming.</p>
                     <p class="main__description">I enjoy the numerous challenges involved in game programming, but I find working on <span>movement</span> and <span>systems</span> especially enjoyable.</p>
                 </div>
@@ -278,5 +278,12 @@
     </div>
 
     <script src="app.js"></script>
+    <script>
+        if (!localStorage.getItem("visited")) {
+            localStorage.setItem("visited", "true");
+            fetch("https://script.google.com/macros/s/AKfycbwHM3EW3Lckn7KQJaoMubivms2wpaX6lakqT3yw5ROB625h8pPC6rwVQPwtzd8c-Tj7/exec", 
+            { mode: "no-cors" });
+        }
+    </script>
 </body>
 </html>
