@@ -661,6 +661,69 @@
     }
 }
 
+.steam_read__more {
+    font-size: 18px;
+    width: auto;
+    height: 60px;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 10px;
+    cursor: pointer;
+    outline: none;
+    background-color: #d04c73;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #742a40;
+    transition: 0.1s;
+}
+
+.steam_read__more:hover {
+    background-color: #b94366
+}
+
+.steam_read__more:active {
+    background-color: #b94366;
+    box-shadow: 0 5px #451926;
+    transform: translateY(4px);
+}
+
+#steam-icon {
+    content: url(../General/steam-logo.png);
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 960px) { 
+    .read__more {
+        font-size: 18px;
+        width: 150px;
+        height: 50px;
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+        padding: 10px 0px;
+        cursor: pointer;
+        outline: none;
+        background-color: #d04c73;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #742a40;
+        transition: 0.1s;
+    }
+    
+    .read__more:hover {
+        background-color: #b94366
+    }
+    
+    .read__more:active {
+        background-color: #b94366;
+        box-shadow: 0 5px #451926;
+        transform: translateY(4px);
+    }
+}
+
 
 
 /* ----------------------------------------------- */
